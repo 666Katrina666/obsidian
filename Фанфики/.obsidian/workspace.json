@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f32abe374e84fc2f",
+            "id": "25dccf6c74250d7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах.md",
+                "file": "70. Dc talon.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах"
+              "title": "70. Dc talon"
             }
           }
         ]
@@ -53,9 +53,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Ори ",
+                "query": "",
                 "matchingCase": true,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 656.5,
-    "collapsed": true
+    "width": 216.5
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -143,17 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "28_Будущее_без_Бэтмена_потому_что_Бэтсемью_выкинуло_почти_на_100_лет_в_будущее__Воскрешение_Джейсона.md",
+                "file": "222_Магические_братья_Готэма.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 28_Будущее_без_Бэтмена_потому_что_Бэтсемью_выкинуло_почти_на_100_лет_в_будущее__Воскрешение_Джейсона"
+              "title": "Структура 222_Магические_братья_Готэма"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -162,6 +161,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Создать новую базу": false,
       "switcher:Меню быстрого перехода": false,
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
@@ -170,34 +170,34 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f32abe374e84fc2f",
+  "active": "25dccf6c74250d7e",
   "lastOpenFiles": [
-    "47 Фанфик о трансформации Бэтсемьи в формы душ. Джейсон принимает себя.md",
-    "48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах.md",
-    "244_Джейсон Тодд при воскрешении не возвращается полностью, половина его души перерождается в другом мире (лес Нибель из Ori and the Blind Forest, а потом Ori and the Will of the Wisps)..md",
-    "46 Титул Робина несёт магию духа-птицы, пробуждающую уникальные трансформации.md",
-    "45 Робин из будущего (Джейсон Тодд) предотвращает катастрофу Ра’с аль Гула..md",
-    "44 Готэм оживает, наделяя Джейсона Тодда крыльями, эмпатией и связью с городом.md",
-    "43 Бэтсемья в Бэтпещере сталкивается с проклятием Готэма, меняющим их.md",
-    "173_Джейсон_Тодд_Красный_Капюшон_обретает_магическую_форму_подростка-Фантома_после_контакта_с_артефа.md",
-    "149_Джейсон_Тодд_становится_халфой_после_экспериментов_GIW_и_попадания_в_Зону_Призраков_Он_объединяе.md",
-    "144_Джейсон_покидает_Готэм_после_ссоры_с_Бэт-семьёй_но_случай_в_лаборатории_GIW_превращает_его_в_хал.md",
-    "121_Этот_фанфик_исследует_альтернативное_развитие_событий_где_Джейсон_Тодд_становится_халфой_после_п.md",
-    "98_Бэтсемья_находит_раненого_Дэнни_подвергшегося_экспериментам_GIW_и_помогает_ему_Они_уничтожают_лаб.md",
-    "65_Джейсон_Тодд_становится_халфой_в_Призрачной_Зоне_а_Брюс_Уэйн_как_его_спутник_помогает_ему_справит.md",
-    "174_Джейсон_Тодд_Красный_Капюшон_обретает_магическую_способность_превращаться_в_подростка_с_телекине.md",
-    "175_Джейсон_Тодд_Красный_Капюшон_из-за_артефакта_превращается_в_подростка_Искру_с_магией_Бэтсемья_зн.md",
-    "172_Джейсон_Тодд_Красный_Капюшон_скрывает_тайну_он_может_превращаться_в_магическую_форму_подростка_б.md",
-    "51_Красный_Колпак_он_же_Джейсон_Тодд_действует_в_одиночку_в_Готэме_выслеживая_агентов_таинственного_.md",
-    "171_Джейсон_Тодд_бывший_Робин_ныне_Коготь_возвращается_к_Бэтсемье_после_плена_Суда_Сов_Его_сознание_.md",
-    "170_Брюс_случайно_пожелавший_вернуть_искру_Джейсону_запускает_цепочку_событий_в_результате_которых_Д.md",
-    "114_Джейсон_стал_халфой_из-за_взрыва_в_доках_лунатил_к_семье_чтобы_утешать_от_кошмаров_но_Стеф_его_у.md",
-    "111_Джейсон_подсознательно_приходит_к_семье_утешить_их_от_кошмаров_и_сам_не_знает_что_он_халфа.md",
-    "97_Джейсон_Тодд_известный_как_Ред_Худ_стал_полупризраком_с_теневым_ядром_после_случайного_контакта_с.md",
-    "95_Джейсон_Тодд_становится_халфой_после_взрыва_портала_в_Бесконечные_Царства_но_скрывает_свою_новую_.md",
-    "81_GIW_подвергает_Джейсона_экспериментам_с_эктоплазмой_ускоряя_формирование_ядра_призрака_Он_станови.md",
-    "66_Дик_Грейсон_Ренегат_и_Джейсон_Тодд_работают_под_прикрытием_в_Готэмском_криминальном_синдикате_исп.md",
-    "8 Магический ритуал меняет биологию Готэма, внедряя инстинкты ABO.md",
+    "69. Words We Never Said - Batfam AU Plan.md",
+    "68. Winged Robin - Jason's Transformation and Family Reunion.md",
+    "67. Soul Form - Jason's Magical Transformation by Mystical Beings.md",
+    "66. Undercover in Gotham's Underbelly - Dick and Jason's Secret Mission.md",
+    "65. Light in the Abyss - Jason's Halfa Transformation in Ghost Zone.md",
+    "64. DPxDC Reveal - Jason Todd as Halfa After Resurrection.md",
+    "75. Глава.md",
+    "76. Глава.md",
+    "77. Глава.md",
+    "63. De-Aging Plan - Jason's Magical Regression and False Memories.md",
+    "62. Homecoming - Jason Returns.md",
+    "61. Packbound - Instincts and Nesting.md",
+    "60. Ghosts of Gotham - Hurt - Comfort Arc.md",
+    "59. Accidental ‘Dad’ - The Slip That Binds.md",
+    "58. Shadow of Wings - Outline.md",
+    "57. Ghost Zone Return - Half‑Phantom Hood.md",
+    "56. Reality Wager - Jason's Erased Years.md",
+    "55. Never Returned - Cave Reunion Faultline.md",
+    "54. Shadow Flock - Cult Transforms Three into Feral Forms.md",
+    "53. Cryptid Abduction - Batfamily Kidnaps Jason.md",
+    "47. Soul Forms Ritual - Batfamily's True Shapes.md",
+    "44. Wings of the Robin - Five Paths to Flight.md",
+    "36. Body Swap - Jason and Tim's Identity Crisis.md",
+    "16. Faith's Transformation - Cult Reshapes Batfamily.md",
+    "15. Dockside Abduction - Dr Crow and the Phoenix De - Age.md",
+    "52. Soulform Robin - Golden Wings Unbound.md",
     "Без названия.canvas",
     "Без названия 1.canvas",
     "Без названия 3.canvas",
