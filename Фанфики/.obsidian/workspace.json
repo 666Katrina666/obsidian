@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "28052d248daac437",
+        "id": "b939a6e7459c3a2c",
         "type": "tabs",
         "children": [
           {
-            "id": "25dccf6c74250d7e",
+            "id": "390f788b136b97b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "70. Dc talon.md",
+                "file": "249. Fledgling's Nest - Jason's Ghost Form and Family Life.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "70. Dc talon"
+              "title": "249. Fledgling's Nest - Jason's Ghost Form and Family Life"
             }
           }
         ]
@@ -55,8 +55,8 @@
               "state": {
                 "query": "",
                 "matchingCase": true,
-                "explainSearch": true,
-                "collapseAll": false,
+                "explainSearch": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 216.5
+    "width": 242.5
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -142,21 +142,41 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "222_Магические_братья_Готэма.md",
+                "file": "144. Главы акта откровение.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 222_Магические_братья_Готэма"
+              "title": "Структура 144. Главы акта откровение"
+            }
+          },
+          {
+            "id": "6fb6bd91ba79ddf1",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "151fdce4d3e4ec26",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 426.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -165,39 +185,49 @@
       "switcher:Меню быстрого перехода": false,
       "graph:Граф": false,
       "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
       "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false
+      "command-palette:Открыть палитру команд": false,
+      "markdown-importer:Импорт Markdown-файлов": false,
+      "omnisearch:Omnisearch": false,
+      "smart-connections:Open: Smart Chat": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Connections: Open random connection": true,
+      "daily-notes:Сегодняшняя заметка": false
     }
   },
-  "active": "25dccf6c74250d7e",
+  "active": "390f788b136b97b6",
   "lastOpenFiles": [
-    "69. Words We Never Said - Batfam AU Plan.md",
-    "68. Winged Robin - Jason's Transformation and Family Reunion.md",
-    "67. Soul Form - Jason's Magical Transformation by Mystical Beings.md",
-    "66. Undercover in Gotham's Underbelly - Dick and Jason's Secret Mission.md",
-    "65. Light in the Abyss - Jason's Halfa Transformation in Ghost Zone.md",
-    "64. DPxDC Reveal - Jason Todd as Halfa After Resurrection.md",
-    "75. Глава.md",
-    "76. Глава.md",
-    "77. Глава.md",
+    "248. Centaurus Imprint - Jason's Magical Transformation and Family Bond.md",
+    "247. Dick's Omega Heat and Jason's Puppy Nature.md",
+    "7 Альтернативная вселенная DC с омегаверсом, где Бэтфемили сталкивается с магией и инстинктами..md",
+    "7. Pack Instincts - Roles and Scent Theory.md",
+    "6. Pack Oath - The Hidden Pup Revealed.md",
+    "246. Fledgling Echoes - Jason and Damian as Halfas.md",
+    "245. Jason and Steph's Underground Journey.md",
+    "244. Split Soul of Nibel - Jason's Ori Reincarnation.md",
+    "243. Multi-World Magical Forms and Family Discovery.md",
+    "242. Magical Transformation and Family Acceptance.md",
+    "241. Underworld Heir and Family Discovery.md",
+    "240. Spirit of Light and Family Acceptance.md",
+    "239. Medieval Kingdom and Lost Prince Return.md",
+    "238. Metaverse Gotham and Curse Cleansing.md",
     "63. De-Aging Plan - Jason's Magical Regression and False Memories.md",
-    "62. Homecoming - Jason Returns.md",
-    "61. Packbound - Instincts and Nesting.md",
-    "60. Ghosts of Gotham - Hurt - Comfort Arc.md",
-    "59. Accidental ‘Dad’ - The Slip That Binds.md",
-    "58. Shadow of Wings - Outline.md",
-    "57. Ghost Zone Return - Half‑Phantom Hood.md",
-    "56. Reality Wager - Jason's Erased Years.md",
-    "55. Never Returned - Cave Reunion Faultline.md",
-    "54. Shadow Flock - Cult Transforms Three into Feral Forms.md",
-    "53. Cryptid Abduction - Batfamily Kidnaps Jason.md",
-    "47. Soul Forms Ritual - Batfamily's True Shapes.md",
-    "44. Wings of the Robin - Five Paths to Flight.md",
-    "36. Body Swap - Jason and Tim's Identity Crisis.md",
-    "16. Faith's Transformation - Cult Reshapes Batfamily.md",
-    "15. Dockside Abduction - Dr Crow and the Phoenix De - Age.md",
-    "52. Soulform Robin - Golden Wings Unbound.md",
+    "64. Jason Todd as Halfa After Resurrection.md",
+    "97. Crossed Worlds - DC × Danny Phantom Chapter List.md",
+    "114. Jason's Ghost Transformation and Family Bonds.md",
+    "118. Batfamily with Quirks.md",
+    "121. Jason's Halfa Transformation and Family Reunion.md",
+    "124. Danny's Escape and Jason's Halfa Transformation.md",
+    "152. Lair, Molt and Halfa Acceptance.md",
+    "198. Eliot - Borrowed Childhood, Bruce’s Diary, and a Farewell Note.md",
+    "199. Younger Shadow - Cult Abduction, Double Reveal, and Homecoming.md",
+    "200. Jason's Magical Cat Transformation and Family Discovery.md",
+    "206. Jason's Halfa Double Life and Family Reconciliation.md",
+    "Без названия.base",
+    "Без названия 4.base",
+    "Без названия 2.base",
+    "Без названия 1.base",
+    "Без названия 3.base",
     "Без названия.canvas",
     "Без названия 1.canvas",
     "Без названия 3.canvas",
