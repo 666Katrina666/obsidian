@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f5093992e73d4d24",
+            "id": "ca02ee018b314656",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/366. Sacred Bond - Temple's Dark Secret Revealed.md",
+                "file": "Fanfics/266. Jason Todd as Talon - The Lost Son's Return and Bat-Family Healing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "366. Sacred Bond - Temple's Dark Secret Revealed"
+              "title": "266. Jason Todd as Talon - The Lost Son's Return and Bat-Family Healing"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "https",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5
+    "width": 342.5
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "144. Главы акта откровение.md",
+                "file": "Fanfics/366. Sacred Bond - Temple's Dark Secret Revealed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 144. Главы акта откровение"
+              "title": "Структура 366. Sacred Bond - Temple's Dark Secret Revealed"
             }
           },
           {
@@ -162,13 +162,13 @@
             }
           },
           {
-            "id": "151fdce4d3e4ec26",
+            "id": "d29de2be128d819a",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-connections-view"
+              "icon": "smart-connections",
+              "title": "Connections"
             }
           }
         ],
@@ -176,8 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 426.5,
-    "collapsed": true
+    "width": 426.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,34 +194,36 @@
       "smart-connections:Smart Connections: Open random connection": true
     }
   },
-  "active": "f5093992e73d4d24",
+  "active": "63541914b7f3b6ef",
   "lastOpenFiles": [
-    "Fanfics/365. Fantasy Rebirth - Batfamily's Spiritual Reunion.md",
-    "Fanfics/367.md",
-    "Fanfics/368.md",
+    "Fanfics/24. Talon Made - Dark Bruce’s Betrayal.md",
+    "Fanfics/71. Talon Reflex - Robin Is the Trigger.md",
+    "Fanfics/242. Magical Transformation and Family Acceptance.md",
+    "Fanfics/82. Family Reborn - Blood, Memory, and Talon.md",
+    "Fanfics/269. Jason Todd's Capture - The Court of Owls' Failed Talon Creation and Bat Family Rescue.md",
+    "Fanfics/132. Talon’s Curse - Winged Regression.md",
+    "Fanfics/70. Talon's Return - Jason's Court of Owls Transformation.md",
+    "Fanfics/27. Switching Scars - Talon Body Swaps.md",
+    "Fanfics/2. City of Doubt - Nanotech Trust Plague.md",
+    "Fanfics/1. Midnight Loop - Gotham’s 24 - Hour Reset.md",
+    "Fanfics/270. Batfamily with BNHA Quirks - Reincarnation from Hero Academia to Gotham.md",
+    "Fanfics/268. Jason Todd's Magical Transformation - The Winged Robin Guardian Against the Demonic Portal.md",
+    "Fanfics/100. Shadows and Feathers - Rescue and Home Arc.md",
+    "Fanfics/115. Jason's Ghost Transformation and Family Bonds.md",
+    "tag_count.ps1",
+    "Fanfics/366. Sacred Bond - Temple's Dark Secret Revealed.md",
+    "Fanfics/34. Legacy Exposed - Family vs Batman.md",
+    "Fanfics/35. Heart of Night - Dragon Reveal.md",
+    "Fanfics/30. Project Legacy - Bloodbound Betrayal.md",
+    "Иерархия_тегов.md",
+    "Fanfics/10. Possessive Batfam - Concepts and Scenarios.md",
+    "Fanfics/5. Bloodline Rewrite - Heirs of Wayne.md",
+    "Fanfics/164. Cross-World Wings - From Cardcaptor to Sailor Moon.md",
+    "tags_stats.json",
+    "Fanfics/184. Tokyo Mew Shift - First Winged Form and Overload Control.md",
+    "Fanfics/174. Magical Mask - Oracle, ‘New Kid’, and the Almost - Reveal.md",
+    "Fanfics/134. Phoenix Instinct - Territory and Hidden Nest.md",
     "Fanfics/364 Halfa Shadows - Plans for DC x Danny Phantom Crossover.md",
-    "Fanfics/363. Soul Forms - Temple's Magical Transformation.md",
-    "Fanfics/362. Feather Shadow - Red Hood's Memory-Losing Transformation.md",
-    "Fanfics/361. Hybrid Waves - Red Hood's Chaotic Transformation.md",
-    "Fanfics/360. Phoenix Dawn - Red Hood's Reality-Breaking Rebirth.md",
-    "Fanfics/359. Kitten Form - Red Hood's Magical Feline Transformation.md",
-    "Fanfics/358. Full Moon Transformations - Batfamily's Mythical Curse.md",
-    "Fanfics/357. Labyrinth of Ages - Red Hood's Youthful Journey.md",
-    "Fanfics/356. Progressive De-aging - Batfamily's Growing Curse.md",
-    "Fanfics/355. Captured Cards - Red Hood's Magical Book Transformation.md",
-    "Fanfics/354. Pack Bonds - Batfamily's ABO Pack Dynamic.md",
-    "Fanfics/353. Feather Form - Red Hood's Magical Teen Transformation.md",
-    "Fanfics/352. Spark's Secret - Red Hood's Magical Masquerade.md",
-    "Fanfics/350. Eternal Youth - Batman's Forbidden Experiment.md",
-    "Fanfics/351. Dark Mirror - Batfamily in a Twisted World.md",
-    "Fanfics/346. Ghost Bird - Stephanie and Jason's Unlikely Friendship.md",
-    "Fanfics/348. Library Friends - Red Hood and Spoiler's Unlikely Bond.md",
-    "Fanfics/349. Frozen Time - Batman's Desperate Control.md",
-    "Fanfics/347. Little Ghost - Stephanie's Phantom Encounter.md",
-    "Fanfics/346 fixed.md",
-    "Fanfics/347 fixed.md",
-    "Fanfics/348 fixed.md",
-    "Fanfics/368 fixed.md",
     "fix.py",
     "Без названия.base",
     "CheckTextProblems.py",
@@ -231,8 +232,6 @@
     "Fanfics/fix_paragraphs.py",
     "Без названия 4.base",
     "Без названия 2.base",
-    "Без названия 1.base",
-    "Без названия 3.base",
     "Без названия.canvas",
     "Без названия 1.canvas",
     "Без названия 3.canvas",
