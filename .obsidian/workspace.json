@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/266. Jason Todd as Talon - The Lost Son's Return and Bat-Family Healing.md",
+                "file": "Fanfics/288. Batfamily Reborn Reunion, Jason Found, and Homecoming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "266. Jason Todd as Talon - The Lost Son's Return and Bat-Family Healing"
+              "title": "288. Batfamily Reborn Reunion, Jason Found, and Homecoming"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Sweet Fuel",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 517.5
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -172,11 +172,12 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 426.5
+    "width": 426.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,36 +195,36 @@
       "smart-connections:Smart Connections: Open random connection": true
     }
   },
-  "active": "63541914b7f3b6ef",
+  "active": "ca02ee018b314656",
   "lastOpenFiles": [
-    "Fanfics/24. Talon Made - Dark Bruce’s Betrayal.md",
-    "Fanfics/71. Talon Reflex - Robin Is the Trigger.md",
-    "Fanfics/242. Magical Transformation and Family Acceptance.md",
-    "Fanfics/82. Family Reborn - Blood, Memory, and Talon.md",
-    "Fanfics/269. Jason Todd's Capture - The Court of Owls' Failed Talon Creation and Bat Family Rescue.md",
-    "Fanfics/132. Talon’s Curse - Winged Regression.md",
-    "Fanfics/70. Talon's Return - Jason's Court of Owls Transformation.md",
-    "Fanfics/27. Switching Scars - Talon Body Swaps.md",
-    "Fanfics/2. City of Doubt - Nanotech Trust Plague.md",
-    "Fanfics/1. Midnight Loop - Gotham’s 24 - Hour Reset.md",
-    "Fanfics/270. Batfamily with BNHA Quirks - Reincarnation from Hero Academia to Gotham.md",
-    "Fanfics/268. Jason Todd's Magical Transformation - The Winged Robin Guardian Against the Demonic Portal.md",
-    "Fanfics/100. Shadows and Feathers - Rescue and Home Arc.md",
-    "Fanfics/115. Jason's Ghost Transformation and Family Bonds.md",
+    "Fanfics/289. Healing Under Starlight Red Hood Reveals Magic Forms.md",
+    "Fanfics/290. Magical Metamorphosis.md",
+    "Fanfics/291. Magic, Powers & Transformation.md",
+    "Fanfics/292. Ghost Robin Reveal.md",
+    "Fanfics/293. Bird Metamorphosis and Family Reconciliation.md",
+    "Fanfics/294. Ghost Zone Rescue and Robin Reveal.md",
+    "Fanfics/295. Age Shuffle and Jason's Parentage Reveal.md",
+    "Fanfics/296. Bruce Lost to Darkness, Jason De‑Age Reveal.md",
+    "Fanfics/297. Magic, Powers & Transformation.md",
+    "Fanfics/298. Crystal Surge, Nesting Bruce and De-Aged Jason.md",
+    "Fanfics/299. Pack Rite, Healing, and Kitten Jason.md",
+    "Fanfics/300. Nightmares, Sweet Fuel, and Batfamily Reveal.md",
+    "Fanfics/301. De-Aged Jason and Synthetic Nightmares.md",
+    "Fanfics/302. Mass-Borrowed Forms and Cyclic Transformations.md",
+    "Fanfics/303. Territorial Instincts and Rebirth De‑Age.md",
+    "Fanfics/304. Weekly De‑Aging and Dual Timeline Memories.md",
+    "Fanfics/305. Symbiotic Bond and Rebirth De‑Age.md",
+    "Fanfics/306. Unchangeable Past, Legacy, and Owls.md",
+    "Fanfics/307. Staggered Reversion and Mini‑Robin Ops.md",
+    "Fanfics/308. Batfamily Mythic Shifts.md",
+    "Fanfics/309. Abduction, Forest Escape, and Batfamily Care.md",
+    "Fanfics/310. Lunar Light, Amnesia, and Batfamily Reunion.md",
+    "Fanfics/311. Phasing Jason, Static, and Family Cure.md",
+    "Fanfics/312. Sweet Fuel, Nightmares, and Batfamily Home.md",
+    "Fanfics/313. Shadow Siege, Amnesia, and Found Family.md",
+    "Fanfics/314. Chimera Hunt - Cat Kit Jason’s First Transformation.md",
     "tag_count.ps1",
-    "Fanfics/366. Sacred Bond - Temple's Dark Secret Revealed.md",
-    "Fanfics/34. Legacy Exposed - Family vs Batman.md",
-    "Fanfics/35. Heart of Night - Dragon Reveal.md",
-    "Fanfics/30. Project Legacy - Bloodbound Betrayal.md",
-    "Иерархия_тегов.md",
-    "Fanfics/10. Possessive Batfam - Concepts and Scenarios.md",
-    "Fanfics/5. Bloodline Rewrite - Heirs of Wayne.md",
-    "Fanfics/164. Cross-World Wings - From Cardcaptor to Sailor Moon.md",
     "tags_stats.json",
-    "Fanfics/184. Tokyo Mew Shift - First Winged Form and Overload Control.md",
-    "Fanfics/174. Magical Mask - Oracle, ‘New Kid’, and the Almost - Reveal.md",
-    "Fanfics/134. Phoenix Instinct - Territory and Hidden Nest.md",
-    "Fanfics/364 Halfa Shadows - Plans for DC x Danny Phantom Crossover.md",
     "fix.py",
     "Без названия.base",
     "CheckTextProblems.py",
