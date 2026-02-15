@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ca02ee018b314656",
+            "id": "33d6c5c7649ff0d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/288. Batfamily Reborn Reunion, Jason Found, and Homecoming.md",
+                "file": "similar_fanfics_report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "288. Batfamily Reborn Reunion, Jason Found, and Homecoming"
+              "title": "similar_fanfics_report"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Sweet Fuel",
+                "query": "file:276",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 517.5
+    "width": 200
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах.md",
+                "file": "similar_fanfics_report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для 48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах"
+              "title": "Обратные ссылки для similar_fanfics_report"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fanfics/366. Sacred Bond - Temple's Dark Secret Revealed.md",
+                "file": "Fanfics/373. Phantom finds family in Gotham.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 366. Sacred Bond - Temple's Dark Secret Revealed"
+              "title": "Структура 373. Phantom finds family in Gotham"
             }
           },
           {
@@ -171,12 +171,11 @@
               "title": "Connections"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 426.5,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -192,49 +191,50 @@
       "omnisearch:Omnisearch": false,
       "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Smart Connections: Open random connection": true
+      "smart-connections:Smart Connections: Open random connection": true,
+      "smart-connections:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "ca02ee018b314656",
+  "active": "33d6c5c7649ff0d5",
   "lastOpenFiles": [
-    "Fanfics/289. Healing Under Starlight Red Hood Reveals Magic Forms.md",
-    "Fanfics/290. Magical Metamorphosis.md",
-    "Fanfics/291. Magic, Powers & Transformation.md",
-    "Fanfics/292. Ghost Robin Reveal.md",
-    "Fanfics/293. Bird Metamorphosis and Family Reconciliation.md",
-    "Fanfics/294. Ghost Zone Rescue and Robin Reveal.md",
-    "Fanfics/295. Age Shuffle and Jason's Parentage Reveal.md",
-    "Fanfics/296. Bruce Lost to Darkness, Jason De‑Age Reveal.md",
+    "Fanfics/531. Jason is absorbed by an artifact and becomes furry.md",
+    "similar_fanfics_report.md",
+    "Fanfics/531. Red Hood on Strange Adventures.md",
+    "fix_fanfics_numbering.py",
     "Fanfics/297. Magic, Powers & Transformation.md",
-    "Fanfics/298. Crystal Surge, Nesting Bruce and De-Aged Jason.md",
-    "Fanfics/299. Pack Rite, Healing, and Kitten Jason.md",
-    "Fanfics/300. Nightmares, Sweet Fuel, and Batfamily Reveal.md",
-    "Fanfics/301. De-Aged Jason and Synthetic Nightmares.md",
-    "Fanfics/302. Mass-Borrowed Forms and Cyclic Transformations.md",
-    "Fanfics/303. Territorial Instincts and Rebirth De‑Age.md",
-    "Fanfics/304. Weekly De‑Aging and Dual Timeline Memories.md",
-    "Fanfics/305. Symbiotic Bond and Rebirth De‑Age.md",
-    "Fanfics/306. Unchangeable Past, Legacy, and Owls.md",
-    "Fanfics/307. Staggered Reversion and Mini‑Robin Ops.md",
-    "Fanfics/308. Batfamily Mythic Shifts.md",
-    "Fanfics/309. Abduction, Forest Escape, and Batfamily Care.md",
-    "Fanfics/310. Lunar Light, Amnesia, and Batfamily Reunion.md",
-    "Fanfics/311. Phasing Jason, Static, and Family Cure.md",
-    "Fanfics/312. Sweet Fuel, Nightmares, and Batfamily Home.md",
-    "Fanfics/313. Shadow Siege, Amnesia, and Found Family.md",
-    "Fanfics/314. Chimera Hunt - Cat Kit Jason’s First Transformation.md",
-    "tag_count.ps1",
-    "tags_stats.json",
-    "fix.py",
-    "Без названия.base",
-    "CheckTextProblems.py",
-    "CheckInvisibleChars.py",
-    "fix_paragraphs.py",
-    "Fanfics/fix_paragraphs.py",
-    "Без названия 4.base",
-    "Без названия 2.base",
-    "Без названия.canvas",
+    "Fanfics/522. Red Hood on Strange Adventures.md",
+    "Fanfics/717. Jason Todd revenge in a weak body.md",
+    "Fanfics/716. Development of fan fiction about the consequences of death.md",
+    "Fanfics/715. Portrait of Incarnathra the Caster in art style.md",
+    "Fanfics/714. Jason Todd becomes Talon.md",
+    "Fanfics/713. write a long chapter in the Batcave.md",
+    "Fanfics/712. Jason reveals his secret to his family.md",
+    "Fanfics/711. Night guest in Dick s apartment.md",
+    "Fanfics/710. Jason Todd Teenage Ghost in Red Hood.md",
+    "Fanfics/709. Batfamily dragons tragedy and rebirth.md",
+    "Fanfics/708. World of Half-Phoenixes - eternity and fear.md",
+    "Fanfics/707. Jason and the magical transformation.md",
+    "Fanfics/706. Jason and the fight against physical distance.md",
+    "Fanfics/705. Jason and the Search for Touch.md",
+    "Fanfics/704. Jason becomes a fawn in his room.md",
+    "Fanfics/703. Jason becomes a baby deer.md",
+    "Fanfics/702. Wayne family world family relationships humor.md",
+    "Fanfics/701. Batfamily in the world of centaurs.md",
+    "Fanfics/700. Batman is lost a strange force in the night.md",
+    "Fanfics/699. Jason Todd magical cat boy.md",
+    "Fanfics/698. The Batfamily wakes up with new features.md",
+    "Fanfics/697. Different ways of thinking in conflict.md",
+    "renumber_fanfics.py",
+    "Fanfics/tags_common_from_divergences.py",
+    "Fanfics/copy_lines.py",
+    "Fanfics/_288_utf8.txt",
+    "Fanfics/_288_original.txt",
+    "Fanfics/_build_312.py",
+    "Fanfics/_run_ftfy.py",
+    "Fanfics/_fix_276_1_encoding.py",
+    "Fanfics/_append_divergences.py",
     "Без названия 1.canvas",
+    "Без названия.canvas",
     "Без названия 3.canvas",
     "Без названия 2.canvas"
   ]

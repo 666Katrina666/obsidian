@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фантом - Stellar Core Character Sheet</title>
+    <link rel="stylesheet" href="Фантом_CharacterSheet.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Character Information Section -->
+        <div class="section character-info">
+            <div>
+                <h2>Информация о персонаже</h2>
+                <div class="stat-row">
+                    <span class="stat-label">Имя:</span>
+                    <span class="stat-value" id="char-name">Фантом</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Класс:</span>
+                    <span class="stat-value">Заклинатель</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Источник:</span>
+                    <span class="stat-value">Тени</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Эволюция:</span>
+                    <input type="number" id="evolution" value="0" min="0" onchange="updateStats()">
+                </div>
+            </div>
+            <div>
+                <h3>Описание</h3>
+                <p style="font-size: 0.9em; color: #d1d5db;">
+                    Высокий, худощавый, с мягкими чертами лица. Чёрные волосы, глаза тёмные и пустые — зрачков не видно. 
+                    Молчалив. Предпочитает слушать, редко вступает в разговор, но если принял решение — переубедить невозможно. 
+                    Держится отстранённо.
+                </p>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="section">
+            <h2>Характеристики</h2>
+            <div class="stat-row">
+                <span class="stat-label">Выносливость:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="endurance">12</span> / <span class="stat-value" id="endurance-max">12</span>
+                    <span class="tooltip-text">Сумма урона по всем частям тела (кроме Источника). Автоматически рассчитывается при получении урона.</span>
+                </span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Прочность:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="durability">30</span> / <span class="stat-value" id="durability-max">30</span>
+                    <span class="tooltip-text">Сумма урона по всей броне. Автоматически рассчитывается при получении урона броне.</span>
+                </span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Защита:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="defense">5</span>
+                    <span class="tooltip-text">4 базовая + 1 источник = 5</span>
+                </span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Сопротивление:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="resistance">2</span>
+                    <span class="tooltip-text">Базовое сопротивление: 2</span>
+                </span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Точность:</span>
+                <span class="stat-value" id="accuracy">2</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Сила:</span>
+                <span class="stat-value" id="strength">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Интеллект:</span>
+                <span class="stat-value" id="intelligence">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Источник:</span>
+                <span class="stat-value" id="source">3</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Скорость:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="speed">30</span> фт
+                    <span class="tooltip-text">25 базовая + 5 источник = 30 фт</span>
+                </span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Скрытность:</span>
+                <span class="tooltip-container">
+                    <span class="stat-value" id="stealth">1</span>
+                    <span class="tooltip-text">0 базовая + 1 источник = 1</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Azur Management -->
+        <div class="section">
+            <h2>Азур</h2>
+            <div class="stat-row">
+                <span class="stat-label">Текущий / Максимум:</span>
+                <span class="stat-value" id="azur-current">40</span> / <span class="stat-value" id="azur-max">60</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Нейросферы:</span>
+                <span class="stat-value" id="neurosferas">1</span>
+            </div>
+            <div style="margin-top: 15px;">
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="azur-change" value="0" style="width: 100px;">
+                    <button onclick="changeAzur()">Изменить Азур</button>
+                </div>
+            </div>
+            <div style="margin-top: 15px;">
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="number" id="neurosfera-change" value="0" style="width: 100px;">
+                    <button onclick="changeNeurosferas()">Изменить Нейросферы</button>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                <button onclick="spendNeurosfera()" class="danger">Потратить нейросферу</button>
+            </div>
+            <div id="azur-warning" style="margin-top: 10px; color: #fbbf24; display: none;">
+                ⚠ Близко к максимуму!
+            </div>
+        </div>
+
+        <!-- Health Tracking -->
+        <div class="section" style="grid-column: span 2;">
+            <h2>Здоровье и Броня</h2>
+            
+            <div class="armor-checkbox-container">
+                <label>
+                    <input type="checkbox" id="armor-equipped" checked onchange="toggleArmorDisplay()">
+                    <span>Броня надета</span>
+                </label>
+            </div>
+            
+            <div class="health-grid">
+                <div class="body-part" id="body-head">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Голова (4 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - моментальная смерть</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-head" value="4" min="0" max="4" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-head-display">Броня: <input type="number" id="armor-head" value="6" min="0" max="6" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-body">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Тело (8 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - моментальная смерть</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-body" value="7" min="0" max="8" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-body-display">Броня: <input type="number" id="armor-body" value="22" min="0" max="24" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-rightarm">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Рука Правая (6 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - теряется конечность</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-rightarm" value="6" min="0" max="6" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-rightarm-display">Броня: <input type="number" id="armor-rightarm" value="6" min="0" max="6" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-leftarm">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Рука Левая (6 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - теряется конечность</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-leftarm" value="6" min="0" max="6" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-leftarm-display">Броня: <input type="number" id="armor-leftarm" value="6" min="0" max="6" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-rightleg">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Нога Правая (6 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - теряется конечность</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-rightleg" value="6" min="0" max="6" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-rightleg-display">Броня: <input type="number" id="armor-rightleg" value="6" min="0" max="6" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-leftleg">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Нога Левая (6 ОЗ)
+                            <span class="tooltip-text">При 0 ОЗ - теряется конечность</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-leftleg" value="6" min="0" max="6" onchange="updateHealthDisplay()">
+                        <span class="armor-hp" id="armor-leftleg-display">Броня: <input type="number" id="armor-leftleg" value="6" min="0" max="6" style="width: 50px;"></span>
+                    </div>
+                </div>
+                <div class="body-part" id="body-anima">
+                    <div class="hp-label">
+                        <span class="tooltip-container">
+                            Источник (8 ОЗ)
+                            <span class="tooltip-text">Азурический урон</span>
+                        </span>
+                    </div>
+                    <div class="hp-display">
+                        <input type="number" id="hp-anima" value="8" min="0" max="8" onchange="updateHealthDisplay()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="damage-calculator">
+                <h3>Калькулятор урона</h3>
+                <div class="damage-input-group">
+                    <label>Часть тела:</label>
+                    <select id="damage-target">
+                        <option value="head">Голова</option>
+                        <option value="body">Тело</option>
+                        <option value="rightarm">Рука Правая</option>
+                        <option value="leftarm">Рука Левая</option>
+                        <option value="rightleg">Нога Правая</option>
+                        <option value="leftleg">Нога Левая</option>
+                        <option value="anima">Источник</option>
+                    </select>
+                    <label>Урон:</label>
+                    <input type="number" id="damage-amount" value="0" min="0">
+                    <button onclick="applyDamage()">Применить урон</button>
+                </div>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <button onclick="resetHealth()">Сбросить здоровье</button>
+                <button class="danger" onclick="incarnate()">Инкарнация (10 Азур)</button>
+            </div>
+        </div>
+
+        <!-- Spells Section -->
+        <div class="section">
+            <h2>Заклинания (Тени)</h2>
+            
+            <div class="spell-card">
+                <div class="spell-name">Переход по теням</div>
+                <div class="spell-cost">Стоимость: 5 Азур за человека</div>
+                <div class="spell-description">Телепортация на 60 фт между тенями</div>
+                <button onclick="castSpell('shadowTravel')">Использовать</button>
+            </div>
+
+            <div class="spell-card">
+                <div class="spell-name">Теневой Захват</div>
+                <div class="spell-cost">Стоимость: 3 + 0.5X + Источник Азур</div>
+                <div class="spell-description">Сковывает цели тенями на 60 фт. СЛ: 3 + 0.5X + Источник. Целей: 1 + 0.5X. Длительность: 1 минута</div>
+                <div style="margin-top: 10px;">
+                    <label>Доп. Азур (X):</label>
+                    <input type="number" id="shadow-grasp-x" value="0" min="0" style="width: 80px;">
+                    <button onclick="castSpell('shadowGrasp')">Использовать</button>
+                </div>
+            </div>
+
+            <div class="spell-card">
+                <div class="spell-name">Покров Теней</div>
+                <div class="spell-cost">Стоимость: 10 Азур</div>
+                <div class="spell-description">Касанием до 1 минуты проводит в пространство теней - практически невидим</div>
+                <button onclick="castSpell('shadowVeil')">Использовать</button>
+                <div id="shadow-veil-timer" style="margin-top: 5px; color: #fbbf24; display: none;"></div>
+            </div>
+
+            <div class="spell-card">
+                <div class="spell-name">Глаз Тени</div>
+                <div class="spell-cost">Стоимость: произвольное количество Азур</div>
+                <div class="spell-description">Исследование зоны из тени до 1 км. 1 Азур (1-2 комнаты), 4 Азур (десятки домов), 12 Азур (1 км радиус)</div>
+                <div style="margin-top: 10px;">
+                    <label>Количество Азур:</label>
+                    <input type="number" id="shadow-eye-cost" value="1" min="1" style="width: 80px;">
+                    <button onclick="castSpell('shadowEye')">Использовать</button>
+                </div>
+                <div id="shadow-eye-timer" style="margin-top: 5px; color: #fbbf24; display: none;"></div>
+                <div style="margin-top: 10px;">
+                    <label>Поддержание (минуты):</label>
+                    <input type="number" id="shadow-eye-maintenance-minutes" value="1" min="1" style="width: 80px;">
+                    <button onclick="maintainShadowEye()">Потратить на поддержание</button>
+                    <div style="font-size: 0.85em; color: #a78bfa; margin-top: 5px;">Стоимость: 2 Азур/мин</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 15px; padding: 10px; background: rgba(139, 92, 246, 0.2); border-radius: 5px;">
+                <strong>Пассивные бонусы источника:</strong>
+                <div>Скрытность +1, Защита +1, Скорость +5 фт</div>
+            </div>
+        </div>
+
+        <!-- Weapons Section -->
+        <div class="section">
+            <h2>Оружие</h2>
+            
+            <div class="weapon-card">
+                <div class="spell-name">Дробовик "Зажигалочка" (Бета)</div>
+                <div class="spell-description">
+                    <strong>Урон:</strong> 4d4 дробящего (или термического с зажигательными)<br>
+                    <strong>Дальность:</strong> 10/20/40 фт<br>
+                    <strong>Обойма:</strong> 2 патрона<br>
+                    <strong>Перезарядка:</strong> 1 Действие
+                </div>
+                <div class="ammo-display">
+                    <div class="ammo-item">
+                        <div>Обойма:</div>
+                        <input type="number" id="shotgun-magazine" value="2" min="0" max="2" style="width: 60px;">
+                    </div>
+                    <div class="ammo-item">
+                        <div>Обычные:</div>
+                        <input type="number" id="shotgun-regular" value="10" min="0" style="width: 60px;">
+                    </div>
+                    <div class="ammo-item">
+                        <div>Зажигательные:</div>
+                        <input type="number" id="shotgun-incendiary" value="6" min="0" style="width: 60px;">
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>Тип патронов:</label>
+                    <select id="shotgun-ammo-type">
+                        <option value="regular">Обычные</option>
+                        <option value="incendiary">Зажигательные</option>
+                    </select>
+                    <label style="margin-left: 15px;">Дальность:</label>
+                    <select id="shotgun-range">
+                        <option value="10">10 фт</option>
+                        <option value="20">20 фт</option>
+                        <option value="40">40 фт</option>
+                    </select>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button onclick="shotgunAttack()">Выстрел</button>
+                    <button onclick="shotgunReload()">Перезарядка</button>
+                </div>
+            </div>
+
+            <div class="weapon-card">
+                <div class="spell-name">Меч "Легион" (Бета)</div>
+                <div class="spell-description">
+                    <strong>Урон:</strong> 1d8 режущего + Сила<br>
+                    <strong>Дальность:</strong> 5 фт (ближний) / 30 фт (бросок)<br>
+                    <strong>Активация:</strong> 1 Действие - добавляет "азурический" и +1 урона на 2 раунда<br>
+                    <strong>Ограничение:</strong> 3 раза в день
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="stat-row">
+                        <span>Использовано активаций:</span>
+                        <input type="number" id="sword-activations" value="0" min="0" max="3" style="width: 60px;">
+                        <span>/ 3</span>
+                    </div>
+                    <div id="sword-active-indicator" style="margin-top: 5px; color: #fbbf24; display: none;">
+                        ⚡ Активирован! Раундов осталось: <span id="sword-rounds-left">0</span>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button onclick="swordAttack()">Атака мечом</button>
+                    <button onclick="swordActivate()">Активировать</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Talents and Weakness -->
+        <div class="section">
+            <h2>Таланты</h2>
+            <div style="margin: 10px 0;">
+                <div style="padding: 10px; background: rgba(75, 75, 105, 0.4); border-radius: 5px; margin: 5px 0;">
+                    <strong>+1 к точности</strong> при стрельбе из дробовика на ближней дистанции (5-10 фт)
+                </div>
+                <div style="padding: 10px; background: rgba(75, 75, 105, 0.4); border-radius: 5px; margin: 5px 0;">
+                    <strong>Защитная стойка:</strong> действие обороны дает +2, а не +1, если персонаж никого не атаковал и/или не передвигался в раунде
+                </div>
+            </div>
+            <h2>Слабость</h2>
+            <div style="padding: 10px; background: rgba(239, 68, 68, 0.2); border-radius: 5px; margin: 5px 0;">
+                <strong>Упрямство</strong>
+            </div>
+        </div>
+
+        <!-- Actions and Dice -->
+        <div class="section">
+            <h2>Действия и Броски</h2>
+            
+            <div style="margin: 15px 0;">
+                <button onclick="rollD12()">Бросок D12</button>
+                <div id="dice-result" class="dice-result" style="display: none;"></div>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <h3>Атака</h3>
+                <button onclick="rollAttack()">Атака (D12 + Точность)</button>
+                <div id="attack-result" style="margin-top: 10px; display: none;"></div>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <h3>Оборона</h3>
+                <label>
+                    <input type="checkbox" id="defensive-stance"> Защитная стойка
+                </label>
+                <button onclick="useDefense()">Оборона</button>
+                <div id="defense-result" style="margin-top: 10px; display: none;"></div>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <h3>Анализ</h3>
+                <button onclick="rollAnalysis()">Анализ (D12 + Интеллект)</button>
+                <div id="analysis-result" style="margin-top: 10px; display: none;"></div>
+            </div>
+
+            <div style="margin: 15px 0;">
+                <h3>Передвижение</h3>
+                <div>Скорость: <span id="speed-display">25</span> фт</div>
+            </div>
+        </div>
+
+        <!-- Round and Action Tracker -->
+        <div class="section">
+            <h2>Раунд и Действия</h2>
+            <div class="stat-row">
+                <span class="stat-label">Текущий раунд:</span>
+                <input type="number" id="current-round" value="1" min="1" style="width: 80px;">
+            </div>
+            <div style="margin-top: 15px;">
+                <div class="stat-label" style="margin-bottom: 10px;">Действия в этом ходу:</div>
+                <div class="action-tracker">
+                    <div class="action-point" id="action-1" onclick="toggleAction(1)">1</div>
+                    <div class="action-point" id="action-2" onclick="toggleAction(2)">2</div>
+                    <div class="action-point" id="action-3" onclick="toggleAction(3)">3</div>
+                </div>
+                <button onclick="resetActions()" style="margin-top: 10px;">Сбросить действия</button>
+            </div>
+        </div>
+
+        <!-- Body Improvements -->
+        <div class="section">
+            <h2>Улучшения тела</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #8b5cf6;">
+                        <th style="padding: 8px; text-align: left; color: #c4b5fd;">Улучшение</th>
+                        <th style="padding: 8px; text-align: left; color: #c4b5fd;">Эффект</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #4a4a6a;">
+                        <td style="padding: 8px;">Источник: Тени</td>
+                        <td style="padding: 8px;">
+                            <span class="tooltip-container">
+                                Скорость +5 фт, Скрытность +1, Защита +1
+                                <span class="tooltip-text">Пассивные бонусы источника Тени</span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Equipment List -->
+        <div class="section">
+            <h2>Снаряжение</h2>
+            <textarea id="equipment" class="notes-area" placeholder="Снаряжение персонажа...">✓ Дробовик "Зажигалочка"
+✓ Меч "Легион"
+✓ Броня "Гардиан"
+✓ Термическая граната
+✓ Переносное Хранилище</textarea>
+        </div>
+
+        <!-- Notes -->
+        <div class="section" style="grid-column: span 2;">
+            <h2>Заметки</h2>
+            <textarea id="notes" class="notes-area" placeholder="Заметки к сессии..."></textarea>
+        </div>
+
+        <!-- Edit Azur/Neurosfera Values -->
+        <div class="section">
+            <h2>Редактирование значений</h2>
+            <div style="margin: 15px 0;">
+                <div class="stat-row" style="margin-bottom: 10px;">
+                    <span class="stat-label">Текущий Азур:</span>
+                    <input type="number" id="edit-azur-current" value="40" min="0" style="width: 100px;">
+                </div>
+                <div class="stat-row" style="margin-bottom: 10px;">
+                    <span class="stat-label">Максимум Азура:</span>
+                    <input type="number" id="edit-azur-max" value="60" min="0" style="width: 100px;">
+                </div>
+                <div class="stat-row" style="margin-bottom: 10px;">
+                    <span class="stat-label">Нейросферы:</span>
+                    <input type="number" id="edit-neurosferas" value="1" min="0" style="width: 100px;">
+                </div>
+                <button onclick="editAzurValues()" style="margin-top: 10px; width: 100%;">Применить изменения</button>
+            </div>
+        </div>
+
+        <!-- Save/Load -->
+        <div class="section">
+            <h2>Сохранение</h2>
+            <div class="save-load-buttons">
+                <button onclick="saveCharacter()">Сохранить персонажа</button>
+                <button onclick="loadCharacter()">Загрузить персонажа</button>
+            </div>
+            <div style="margin-top: 15px;">
+                <h3>Экспорт/Импорт в файл</h3>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <button onclick="exportToFile()">Экспортировать в файл</button>
+                    <label style="display: flex; flex-direction: column; gap: 5px;">
+                        <span>Импортировать из файла:</span>
+                        <input type="file" id="import-file" accept=".txt" onchange="importFromFile(event)" style="color: #e0e0e0;">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Фантом_CharacterSheet.js"></script>
+</body>
+</html>
