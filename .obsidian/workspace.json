@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "similar_fanfics_report.md",
+                "file": "Fanfics/508. continue the following to a long sentence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "similar_fanfics_report"
+              "title": "508. continue the following to a long sentence"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -189,7 +190,6 @@
       "markdown-importer:Импорт Markdown-файлов": false,
       "daily-notes:Сегодняшняя заметка": false,
       "omnisearch:Omnisearch": false,
-      "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
       "smart-connections:Smart Lookup: Open lookup view": false
@@ -197,8 +197,12 @@
   },
   "active": "33d6c5c7649ff0d5",
   "lastOpenFiles": [
-    "Fanfics/531. Jason is absorbed by an artifact and becomes furry.md",
+    "Fanfics/131. Perfect Gotham - Family Without Batman.md",
+    "Fanfics/508. continue the following to a long sentence.md",
     "similar_fanfics_report.md",
+    "Fanfics/508.1. Dick Encounters Ghost - Story.md",
+    "Fanfics/508. Dick encounters a real ghost.md",
+    "Fanfics/531. Jason is absorbed by an artifact and becomes furry.md",
     "Fanfics/531. Red Hood on Strange Adventures.md",
     "fix_fanfics_numbering.py",
     "Fanfics/297. Magic, Powers & Transformation.md",
@@ -220,10 +224,6 @@
     "Fanfics/703. Jason becomes a baby deer.md",
     "Fanfics/702. Wayne family world family relationships humor.md",
     "Fanfics/701. Batfamily in the world of centaurs.md",
-    "Fanfics/700. Batman is lost a strange force in the night.md",
-    "Fanfics/699. Jason Todd magical cat boy.md",
-    "Fanfics/698. The Batfamily wakes up with new features.md",
-    "Fanfics/697. Different ways of thinking in conflict.md",
     "renumber_fanfics.py",
     "Fanfics/tags_common_from_divergences.py",
     "Fanfics/copy_lines.py",
