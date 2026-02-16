@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b939a6e7459c3a2c",
+        "id": "e2dcbedab040c9ef",
         "type": "tabs",
         "children": [
           {
-            "id": "33d6c5c7649ff0d5",
+            "id": "4eb93dab0b1def5d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/175. Magical Masquerade - The Spark Suit That Won’t Let Go.md",
+                "file": "similar_fanfics_report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "175. Magical Masquerade - The Spark Suit That Won’t Let Go"
-            }
-          },
-          {
-            "id": "11a6519bf4bc340b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fanfics/175. Magical Masquerade - The Spark Suit That Won’t Let Go.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "175. Magical Masquerade - The Spark Suit That Won’t Let Go"
+              "title": "similar_fanfics_report"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"И все это длилось долю секунды. Следующей долей была новая, острая, разрывающая боль.\"",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -89,12 +74,12 @@
               "title": "Закладки"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -210,44 +195,44 @@
       "smart-connections:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "11a6519bf4bc340b",
+  "active": "4eb93dab0b1def5d",
   "lastOpenFiles": [
-    "Fanfics/441. Jason Todd returns to his place.md",
-    "Fanfics/345.3. Magical Masquerade Story.md",
-    "Fanfics/345.2. Jason Todd Returns Story.md",
-    "Fanfics/175. Magical Masquerade - The Spark Suit That Won’t Let Go.md",
-    "Fanfics/203. Tokyo Mew Shift - Alley Dust, Avian Features and Secret Patrols.md",
-    "Fanfics/196.2. Kitten Gotham Story.md",
-    "Fanfics/196.1. Jason Cat Transformation Story.md",
-    "Fanfics/345.1. Spark Secret Story.md",
-    "Fanfics/333.2. Phantom Shadows Story.md",
-    "Fanfics/333.1. Phantom Gotham Story.md",
+    "Fanfics/706.2. Jason and the fight against physical distance - Part 2.md",
+    "Fanfics/706.1. Jason and the fight against physical distance - Part 1.md",
+    "Fanfics/Archive/705. Jason and the Search for Touch.md",
+    "Fanfics/archive_split_706.py",
+    "Fanfics/684.2. Plot There is a mysterious kul in Gotham - Part 2.md",
+    "Fanfics/684.1. Plot There is a mysterious kul in Gotham - Part 1.md",
+    "Fanfics/Archive/679. Jason fights magic in Gotham.md",
+    "Fanfics/archive_split_684.py",
+    "Fanfics/705. Jason and the Search for Touch.md",
+    "Fanfics/706. Jason and the fight against physical distance.md",
     "similar_fanfics_report.md",
-    "Fanfics/131.2. Continue Long Sentence Story.md",
-    "Fanfics/131.1. Perfect Gotham Story.md",
-    "Fanfics/196. Jason's Magical Cat Transformation and Family Discovery.md",
-    "Fanfics/500. Kitten trapped by Gotham superheroes.md",
-    "Fanfics/345. Spark's Secret - Red Hood's Magical Masquerade.md",
-    "Fanfics/64. Light in the Abyss - Jason's Halfa Transformation in Ghost Zone.md",
-    "Fanfics/77. Admin Exposed - Server Collapse.md",
-    "Fanfics/169. Phantom in the Shadows - Jason’s Secret Teen Form.md",
-    "Fanfics/333. Phantom in Gotham - Red Hood's Secret Magical Form.md",
-    "Fanfics/131. Perfect Gotham - Family Without Batman.md",
-    "Fanfics/508. continue the following to a long sentence.md",
-    "Fanfics/508.1. Dick Encounters Ghost - Story.md",
-    "Fanfics/508. Dick encounters a real ghost.md",
-    "Fanfics/531. Jason is absorbed by an artifact and becomes furry.md",
-    "Fanfics/531. Red Hood on Strange Adventures.md",
-    "fix_fanfics_numbering.py",
-    "renumber_fanfics.py",
-    "Fanfics/tags_common_from_divergences.py",
-    "Fanfics/copy_lines.py",
-    "Fanfics/_288_utf8.txt",
-    "Fanfics/_288_original.txt",
-    "Fanfics/_build_312.py",
-    "Fanfics/_run_ftfy.py",
-    "Fanfics/_fix_276_1_encoding.py",
-    "Fanfics/_append_divergences.py",
+    "Fanfics/663.2. Batfamily tragedy healing hope - Part 2.md",
+    "Fanfics/663.1. Batfamily tragedy healing hope - Part 1.md",
+    "Fanfics/Archive/693. Batman tragedy of family and self-distortion.md",
+    "Fanfics/archive_split_663.py",
+    "Fanfics/679. Jason fights magic in Gotham.md",
+    "Fanfics/684. Plot There is a mysterious kul in Gotham.md",
+    "Fanfics/606.2. Jason Todd and the Magic Crystal - Part 2.md",
+    "Fanfics/606.1. Jason Todd and the Magic Crystal - Part 1.md",
+    "Fanfics/Archive/604. Bruce and Jason Return to Darkness.md",
+    "Fanfics/663. Batfamily tragedy healing hope.md",
+    "Fanfics/archive_split_606.py",
+    "Fanfics/693. Batman tragedy of family and self-distortion.md",
+    "Fanfics/604. Bruce and Jason Return to Darkness.md",
+    "Fanfics/596.2. write a long chapter of Pursuit in Go - Part 2.md",
+    "Fanfics/596.1. write a long chapter of Pursuit in Go - Part 1.md",
+    "Fanfics/Archive/595. Jason goes to another world.md",
+    "Fanfics/606. Jason Todd and the Magic Crystal.md",
+    "Fanfics/archive_split_596.py",
+    "Fanfics/595. Jason goes to another world.md",
+    "Fanfics/596. write a long chapter of Pursuit in Go.md",
+    "Fanfics/archive_split_566.py",
+    "Fanfics/archive_split_563.py",
+    "Fanfics/archive_split_557.py",
+    "Fanfics/archive_split_554.py",
+    "Fanfics/archive_split_549.py",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",

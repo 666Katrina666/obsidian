@@ -13,15 +13,33 @@ MULTI_DIR = os.path.join(OBSIDIAN, ".smart-env", "multi")
 FANFICS_DIR = os.path.join(OBSIDIAN, "Fanfics")
 REPORT_PATH = os.path.join(OBSIDIAN, "similar_fanfics_report.md")
 
+def parse_fanfic_number(name):
+    """
+    Parse number from filename: Fanfics_521__, Fanfics_521_1__, Fanfics_521_2__ -> 521.0, 521.1, 521.2.
+    Returns float or None if not matched. Skips Fanfics_Archive_*.
+    """
+    if not name.startswith("Fanfics_") or "Archive" in name:
+        return None
+    m = re.match(r"Fanfics_(\d+)(?:_(\d+))?__", name)
+    if not m:
+        return None
+    main = int(m.group(1))
+    sub = m.group(2)
+    if sub is not None:
+        sub_int = int(sub)
+        sub_len = len(sub)
+        return main + sub_int / (10 ** sub_len)  # 521_1 -> 521.1, 521_2 -> 521.2, 521_10 -> 521.10
+    return float(main)
+
 def get_ajson_list():
-    """Return list of (num, ajson_path) for Fanfics_*.ajson, num as int."""
+    """Return list of (num_float, ajson_path). num_float: 521.0, 521.1, 521.2 for 521, 521.1, 521.2."""
     result = []
     for name in os.listdir(MULTI_DIR):
         if not name.startswith("Fanfics_") or not name.endswith(".ajson"):
             continue
-        m = re.match(r"Fanfics_(\d+)_", name)
-        if m:
-            result.append((int(m.group(1)), os.path.join(MULTI_DIR, name)))
+        num = parse_fanfic_number(name)
+        if num is not None:
+            result.append((num, os.path.join(MULTI_DIR, name)))
     return result
 
 def read_path_from_ajson(ajson_path):
@@ -59,58 +77,64 @@ def is_empty_ajson(ajson_path):
 
 def main():
     ajson_list = get_ajson_list()
-    num_to_ajson = {num: path for num, path in ajson_list}
-    nums = sorted(num_to_ajson.keys())
-    print("Total ajson files:", len(nums))
-    if not nums:
+    print("Total ajson files:", len(ajson_list))
+    if not ajson_list:
         print("No Fanfics_*.ajson files found. Exit.")
         return
-    print("Number range:", min(nums), "-", max(nums))
+    all_nums = sorted(set(n for n, _ in ajson_list))
+    print("Number range: {} - {} (incl. sub: 521.1, 521.2)".format(min(all_nums), max(all_nums)))
 
     # 1) Delete empty ajson
     deleted_ajson = []
-    for num in list(nums):
-        path = num_to_ajson.get(num)
-        if path and is_empty_ajson(path):
+    new_list = []
+    for num, path in ajson_list:
+        if is_empty_ajson(path):
             os.remove(path)
             deleted_ajson.append((num, path))
-            del num_to_ajson[num]
-    nums = sorted(num_to_ajson.keys())
+        else:
+            new_list.append((num, path))
+    ajson_list = new_list
     if deleted_ajson:
         print("Deleted empty ajson:", len(deleted_ajson), [n for n, _ in deleted_ajson])
 
-    # 2) Find gaps and build renames: for each gap, assign current_max -> gap
+    # 2) Find gaps only in integer numbers; fill by renaming file with max integer
     renames = []  # (old_num, new_num, old_path_in_file) for report
     while True:
-        nums = sorted(num_to_ajson.keys())
-        if not nums:
+        integer_nums = sorted(set(int(n) for n, p in ajson_list if n == int(n)))
+        if not integer_nums:
             break
         gap = None
-        for i in range(1, len(nums)):
-            if nums[i] - nums[i-1] > 1:
-                gap = nums[i-1] + 1
+        for i in range(1, len(integer_nums)):
+            if integer_nums[i] - integer_nums[i-1] > 1:
+                gap = integer_nums[i-1] + 1
                 break
         if gap is None:
             break
-        # take file with max number and rename to gap
-        old_num = max(nums)
-        ajson_path = num_to_ajson[old_num]
+        old_num = max(integer_nums)
+        # Pick one file with num_float == old_num (integer, main file like 523 not 523.1)
+        candidate = None
+        for i, (num, path) in enumerate(ajson_list):
+            if num == old_num:
+                candidate = (i, num, path)
+                break
+        if candidate is None:
+            break
+        i, old_num_float, ajson_path = candidate
         old_path_str = read_path_from_ajson(ajson_path)
         if not old_path_str:
             print("Skip (no path in ajson):", ajson_path)
-            del num_to_ajson[old_num]
+            ajson_list.pop(i)
             continue
 
         # old_path_str like "Fanfics/717. Jason Todd revenge in a weak body.md"
-        # title = "717. Jason Todd revenge in a weak body.md" -> "556. Jason Todd ..."
         parts = old_path_str.split("/", 1)
         if len(parts) != 2 or not parts[1]:
-            del num_to_ajson[old_num]
+            ajson_list.pop(i)
             continue
         title_with_num = parts[1]  # "717. Jason Todd ..."
         title_match = re.match(r"^\d+\.\s*(.+)$", title_with_num)
         if not title_match:
-            del num_to_ajson[old_num]
+            ajson_list.pop(i)
             continue
         title_only = title_match.group(1)  # "Jason Todd ..."
         new_path_str = "Fanfics/{}. {}".format(gap, title_only)
@@ -154,9 +178,8 @@ def main():
             f.write(content)
         if ajson_path != new_ajson_path:
             os.remove(ajson_path)
-        num_to_ajson[gap] = new_ajson_path
-        del num_to_ajson[old_num]
-        renames.append((old_num, gap, old_path_str))
+        ajson_list[i] = (float(gap), new_ajson_path)
+        renames.append((int(old_num), gap, old_path_str))
         print("Renamed ajson: {} -> {} (fill gap {})".format(old_num, gap, gap))
 
     # 3) Update report: replace [[Fanfics/OLD. Title]] with [[Fanfics/NEW. Title]] when (old, new) in renames
