@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""#dragon - dragons and dragon transformations."""
+"""#dragon - dragons and dragon transformations. Require 2+ markers."""
 import re
 
 TAG = "dragon"
@@ -11,8 +11,13 @@ PATTERNS = [
     r"полудракон", r"полу-дракон", r"драконья трансформация", r"драконья природа",
     r"дракон-оборотень", r"оборотень-дракон",
 ]
-PAT = re.compile("|".join(PATTERNS), re.IGNORECASE)
 
 
 def check(text):
-    return bool(text and PAT.search(text))
+    if not text:
+        return False
+    found = set()
+    for p in PATTERNS:
+        if re.search(p, text, re.IGNORECASE):
+            found.add(p)
+    return len(found) >= 2

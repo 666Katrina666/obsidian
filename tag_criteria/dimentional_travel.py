@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""#dimentional_travel - dimensional travel, alternate worlds."""
+"""#dimentional_travel - dimensional travel, alternate worlds. Require 2+ markers."""
 import re
 
 TAG = "dimentional_travel"
@@ -13,8 +13,13 @@ PATTERNS = [
     r"из другого мира", r"в другом мире", r"попаданц", r"dimensional travel",
     r"путешествие между мирами",
 ]
-PAT = re.compile("|".join(PATTERNS), re.IGNORECASE)
 
 
 def check(text):
-    return bool(text and PAT.search(text))
+    if not text:
+        return False
+    found = set()
+    for p in PATTERNS:
+        if re.search(p, text, re.IGNORECASE):
+            found.add(p)
+    return len(found) >= 2

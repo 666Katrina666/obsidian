@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "similar_fanfics_report.md",
+                "file": "Fanfics/716. Development of fan fiction about the consequences of death.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "similar_fanfics_report"
+              "title": "716. Development of fan fiction about the consequences of death"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "similar_fanfics_report.md",
+                "file": "Fanfics/716. Development of fan fiction about the consequences of death.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для similar_fanfics_report"
+              "title": "Обратные ссылки для 716. Development of fan fiction about the consequences of death"
             }
           },
           {
@@ -161,16 +161,6 @@
               "icon": "lucide-ghost",
               "title": "calendar"
             }
-          },
-          {
-            "id": "d29de2be128d819a",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
-            }
           }
         ]
       }
@@ -197,6 +187,13 @@
   },
   "active": "4eb93dab0b1def5d",
   "lastOpenFiles": [
+    "Fanfics/717. Jason Todd revenge in a weak body.md",
+    "Fanfics/291. Danny Phantom AU - Jason and Damian Halfas, GIW and Family.md",
+    "Fanfics/601. Portraits of Jason Todd versions.md",
+    "Fanfics/590. The Batfamily transforms in the Batcave.md",
+    "Иерархия_тегов.md",
+    "update_tag_hierarchy.py",
+    "similar_fanfics_report.md",
     "Fanfics/706.2. Jason and the fight against physical distance - Part 2.md",
     "Fanfics/706.1. Jason and the fight against physical distance - Part 1.md",
     "Fanfics/Archive/705. Jason and the Search for Touch.md",
@@ -207,7 +204,6 @@
     "Fanfics/archive_split_684.py",
     "Fanfics/705. Jason and the Search for Touch.md",
     "Fanfics/706. Jason and the fight against physical distance.md",
-    "similar_fanfics_report.md",
     "Fanfics/663.2. Batfamily tragedy healing hope - Part 2.md",
     "Fanfics/663.1. Batfamily tragedy healing hope - Part 1.md",
     "Fanfics/Archive/693. Batman tragedy of family and self-distortion.md",
@@ -222,17 +218,11 @@
     "Fanfics/693. Batman tragedy of family and self-distortion.md",
     "Fanfics/604. Bruce and Jason Return to Darkness.md",
     "Fanfics/596.2. write a long chapter of Pursuit in Go - Part 2.md",
-    "Fanfics/596.1. write a long chapter of Pursuit in Go - Part 1.md",
-    "Fanfics/Archive/595. Jason goes to another world.md",
-    "Fanfics/606. Jason Todd and the Magic Crystal.md",
     "Fanfics/archive_split_596.py",
-    "Fanfics/595. Jason goes to another world.md",
-    "Fanfics/596. write a long chapter of Pursuit in Go.md",
     "Fanfics/archive_split_566.py",
     "Fanfics/archive_split_563.py",
     "Fanfics/archive_split_557.py",
     "Fanfics/archive_split_554.py",
-    "Fanfics/archive_split_549.py",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",
