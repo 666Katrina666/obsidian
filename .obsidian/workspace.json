@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e2dcbedab040c9ef",
+        "id": "192e626f0df56bfd",
         "type": "tabs",
         "children": [
           {
-            "id": "4eb93dab0b1def5d",
+            "id": "56f33a09be3a9f19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/716. Development of fan fiction about the consequences of death.md",
+                "file": "Fanfics/430. Forest Awakening - Jason and Bruce Trapped Without Gear.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "716. Development of fan fiction about the consequences of death"
+              "title": "430. Forest Awakening - Jason and Bruce Trapped Without Gear"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -95,8 +94,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fanfics/716. Development of fan fiction about the consequences of death.md",
-                "collapseAll": false,
+                "file": "Fanfics/676. Jason in Gotham transformation and struggle.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для 716. Development of fan fiction about the consequences of death"
+              "title": "Обратные ссылки для 676. Jason in Gotham transformation and struggle"
             }
           },
           {
@@ -114,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах.md",
+                "file": "Fanfics/676. Jason in Gotham transformation and struggle.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из 48 Брюс Уэйн и его дети просыпаются в чужом мире, в изменённых телах"
+              "title": "Исходящие ссылки из 676. Jason in Gotham transformation and struggle"
             }
           },
           {
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fanfics/373. Phantom finds family in Gotham.md",
+                "file": "Fanfics/345. Spark's Secret - Red Hood's Magical Masquerade.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 373. Phantom finds family in Gotham"
+              "title": "Структура 345. Spark's Secret - Red Hood's Magical Masquerade"
             }
           },
           {
@@ -162,11 +161,12 @@
               "title": "calendar"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 278.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -178,51 +178,47 @@
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
       "markdown-importer:Импорт Markdown-файлов": false,
-      "daily-notes:Сегодняшняя заметка": false,
-      "omnisearch:Omnisearch": false,
-      "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Smart Connections: Open random connection": true,
-      "smart-connections:Smart Lookup: Open lookup view": false
+      "daily-notes:Сегодняшняя заметка": false
     }
   },
-  "active": "4eb93dab0b1def5d",
+  "active": "56f33a09be3a9f19",
   "lastOpenFiles": [
-    "Fanfics/717. Jason Todd revenge in a weak body.md",
-    "Fanfics/291. Danny Phantom AU - Jason and Damian Halfas, GIW and Family.md",
-    "Fanfics/601. Portraits of Jason Todd versions.md",
-    "Fanfics/590. The Batfamily transforms in the Batcave.md",
-    "Иерархия_тегов.md",
-    "update_tag_hierarchy.py",
-    "similar_fanfics_report.md",
-    "Fanfics/706.2. Jason and the fight against physical distance - Part 2.md",
-    "Fanfics/706.1. Jason and the fight against physical distance - Part 1.md",
-    "Fanfics/Archive/705. Jason and the Search for Touch.md",
-    "Fanfics/archive_split_706.py",
-    "Fanfics/684.2. Plot There is a mysterious kul in Gotham - Part 2.md",
-    "Fanfics/684.1. Plot There is a mysterious kul in Gotham - Part 1.md",
-    "Fanfics/Archive/679. Jason fights magic in Gotham.md",
-    "Fanfics/archive_split_684.py",
-    "Fanfics/705. Jason and the Search for Touch.md",
-    "Fanfics/706. Jason and the fight against physical distance.md",
-    "Fanfics/663.2. Batfamily tragedy healing hope - Part 2.md",
-    "Fanfics/663.1. Batfamily tragedy healing hope - Part 1.md",
-    "Fanfics/Archive/693. Batman tragedy of family and self-distortion.md",
-    "Fanfics/archive_split_663.py",
-    "Fanfics/679. Jason fights magic in Gotham.md",
-    "Fanfics/684. Plot There is a mysterious kul in Gotham.md",
-    "Fanfics/606.2. Jason Todd and the Magic Crystal - Part 2.md",
-    "Fanfics/606.1. Jason Todd and the Magic Crystal - Part 1.md",
-    "Fanfics/Archive/604. Bruce and Jason Return to Darkness.md",
-    "Fanfics/663. Batfamily tragedy healing hope.md",
-    "Fanfics/archive_split_606.py",
-    "Fanfics/693. Batman tragedy of family and self-distortion.md",
-    "Fanfics/604. Bruce and Jason Return to Darkness.md",
-    "Fanfics/596.2. write a long chapter of Pursuit in Go - Part 2.md",
-    "Fanfics/archive_split_596.py",
-    "Fanfics/archive_split_566.py",
-    "Fanfics/archive_split_563.py",
-    "Fanfics/archive_split_557.py",
-    "Fanfics/archive_split_554.py",
+    "Fanfics/422. Bluebird DNA - Jason's Teen Wing Form from Tokyo Mew Mew.md",
+    "Fanfics/420. Truth Wings - Emotional Mask Reveals Batfamily's Wings.md",
+    "Fanfics/414. Gate of Truth - Red Hood's Alchemical Circle Encounter.md",
+    "Fanfics/415. Ghost Zone - Tim and Crew Trapped in Phantom Zone.md",
+    "Fanfics/408. Half-Phoenix World - Eternity Rebirth and Fear Lore Synopsis.md",
+    "Fanfics/407. Hidden Halfa - Jason's Cute Ghost Form and Family Reveal.md",
+    "Fanfics/405. Tokyo Mew Mew - Jason's Kitten DNA and Cat Embarrassment.md",
+    "Fanfics/399. Ghost Fledgling - Spoiler Finds Jason's Ghost Form in Gotham.md",
+    "Fanfics/398. Magic Book - Red Hood Becomes Child Mage at Warehouse.md",
+    "Fanfics/387. Code Signal - Jason's Accidental Distress Call and Rescue.md",
+    "Fanfics/371. Veil-Kara Eye - Dual Perception Artifact and Jason's Wings.md",
+    "Fanfics/359. Sacred Bond - Temple's Dark Secret Revealed.md",
+    "Fanfics/345.1. Spark Secret Story.md",
+    "Fanfics/327. Starborn Secret - Aster and the Red Hood.md",
+    "Fanfics/319. Batfamily Reborn - Shuffled Ages in Gotham.md",
+    "Fanfics/312. Selkie Waynes - Family Pod and Jason’s Seal Secret.md",
+    "Fanfics/306. Sweet Fuel, Кошмары и Бэтсемья — обобщение.md",
+    "Fanfics/300. Unchangeable Past, Legacy, and Owls.md",
+    "Fanfics/278. One Child, Eight Faces — Gotham’s Magical Rumors.md",
+    "Fanfics/271.1.Family Accepts Shadows - Halfa Reveal in Batcave.md",
+    "Fanfics/231. Reincarnation Memories and Quirk Awakening.md",
+    "Fanfics/209. Star Child - Winged Amnesia and Homecoming.md",
+    "Fanfics/196. Jason's Magical Cat Transformation and Family Discovery.md",
+    "Fanfics/188. Order of Shadows - Infiltration, Ritual, and Rescue Reveal.md",
+    "Fanfics/172. Magical Avenger - Viral Fame and Family Exposure.md",
+    "Fanfics/169.1. Isekai Bastard Prince - Jason in Weak Body vs Tyrant King.md",
+    "Beta/_fix_tags.py",
+    "Scripts/fanfics/__pycache__/rename_beta_to_english.cpython-314.pyc",
+    "Scripts/fanfics/__pycache__/beta_english_titles.cpython-314.pyc",
+    "Scripts/fanfics/rename_beta_to_english.py",
+    "Scripts/fanfics/beta_english_titles.py",
+    "_beta_list.txt",
+    "_build_todo.py",
+    "_gen_beta_todo.py",
+    "_beta_clusters.json",
+    "To Join the Whispers.pdf",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",

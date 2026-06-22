@@ -4,14 +4,36 @@ import re
 
 TAG = "ABO"
 
-EXPLICIT = [r"ABO", r"a/b/o", r"омега-верс", r"omega verse", r"платонический ABO", r"платонический або"]
-EXPLICIT_PAT = re.compile("|".join(EXPLICIT), re.IGNORECASE)
+# Fully explicit — any single one is enough
+EXPLICIT_PAT = re.compile(
+    r"\bABO\b"
+    r"|омега.?верс"          # омега-верс, омегаверс
+    r"|omega.?verse"
+    r"|альфа.?омега.?динамик" # "альфа-омега динамика" / "динамика альфа/омега"
+    r"|динамик.{1,10}альфа.{1,20}омег" # "динамика альфы и омеги"
+    r"|в мире альф.{1,10}омег"
+    r"|мир альф и омег"
+    r"|платонический або"
+    r"|платонический ABO",
+    re.IGNORECASE,
+)
 
-MARKERS = [
-    r"альфа", r"альфы", r"альфа-самец", r"омега", r"омеги", r"бета", r"беты",
-    r"динамика альфа", r"альфа и омега", r"гнездо", r"гнездовани", r"течка",
-    r"течку", r"период течки", r"метка", r"метить", r"пометил", r"запах омеги",
+# Specific ABO terms — require 2+ different ones (not just generic «альфа»)
+SPECIFIC = [
+    r"течка",           # heat/rut — very ABO-specific
+    r"запах омеги",
+    r"запах альфы",
+    r"запах беты",
+    r"метка альфы",
+    r"метка омеги",
+    r"альфа пометил",
+    r"пометить омег",
+    r"вторичный пол",
+    r"вторичные половые",
+    r"альфа-зов",
+    r"омега-зов",
 ]
+SPECIFIC_PAT = [re.compile(p, re.IGNORECASE) for p in SPECIFIC]
 
 
 def check(text):
@@ -19,8 +41,6 @@ def check(text):
         return False
     if EXPLICIT_PAT.search(text):
         return True
-    found = set()
-    for pat in MARKERS:
-        if re.search(pat, text, re.IGNORECASE):
-            found.add(pat)
-    return len(found) >= 2
+    # Require 2+ ABO-specific markers
+    found = sum(1 for p in SPECIFIC_PAT if p.search(text))
+    return found >= 2

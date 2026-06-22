@@ -1,22 +1,41 @@
 # -*- coding: utf-8 -*-
-"""#dc/bnha - DC + My Hero Academia crossover (both required)."""
+"""#dc/bnha - DC + My Hero Academia crossover (both universes required).
+
+'UA' removed as a standalone marker — too short, could be an abbreviation
+for anything. Require at least one unambiguous MHA-specific marker alongside DC.
+"""
 import re
 
 TAG = "dc/bnha"
 
-DC_MARKERS = [
-    r"Бэтсемья", r"Бэтпещера", r"Готэм", r"Бэтмен", r"Джейсон", r"Робин",
-]
-BNHA_MARKERS = [
-    r"квирки", r"квирк", r"MHA", r"My Hero Academia", r"герой академия",
-    r"Боку но Хиро", r"UA", r"Юэй", r"Юей", r"Олл Майт", r"All Might",
-    r"Изуку", r"Деку", r"геройская академия", r"академия героев",
-]
+DC_MARKERS_PAT = re.compile(
+    r"Бэтсемья|Бэтпещера|Готэм|Бэтмен|Джейсон|Робин",
+    re.IGNORECASE,
+)
+
+# Only unambiguous MHA markers — no bare 'UA'
+BNHA_PAT = re.compile(
+    r"\bMHA\b"
+    r"|My Hero Academia"
+    r"|Boku no Hero"
+    r"|Боку но Хиро"
+    r"|\bЮэй\b|\bЮей\b"            # UA school (RU name)
+    r"|Олл Майт|All Might"
+    r"|\bИзуку\b|\bМидория\b"
+    r"|\bДеку\b"
+    r"|геройская академия"
+    r"|академия героев"
+    r"|\bквирк"                      # quirk (RU)
+    r"|\bquirk\b"                    # quirk (EN)
+    r"|Бакуго|Бакугоу|Bakugo"
+    r"|Тодороки|Todoroki"
+    r"|Уравака|Uraraka"
+    r"|Класс 1-А|Class 1-A",
+    re.IGNORECASE,
+)
 
 
 def check(text):
     if not text:
         return False
-    has_dc = any(re.search(p, text, re.IGNORECASE) for p in DC_MARKERS)
-    has_bnha = any(re.search(p, text, re.IGNORECASE) for p in BNHA_MARKERS)
-    return has_dc and has_bnha
+    return bool(DC_MARKERS_PAT.search(text)) and bool(BNHA_PAT.search(text))
