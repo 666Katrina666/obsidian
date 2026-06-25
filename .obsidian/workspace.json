@@ -13,12 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fanfics/430. Forest Awakening - Jason and Bruce Trapped Without Gear.md",
+                "file": "Beta/980.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "430. Forest Awakening - Jason and Bruce Trapped Without Gear"
+              "title": "980"
             }
           }
         ]
@@ -53,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:",
+                "query": "\"С семьёй, которая уже составила негласный график дежурств, меню, список запретов, список",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -142,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fanfics/345. Spark's Secret - Red Hood's Magical Masquerade.md",
+                "file": "Beta/981..md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 345. Spark's Secret - Red Hood's Magical Masquerade"
+              "title": "Структура 981."
             }
           },
           {
@@ -183,32 +184,32 @@
   },
   "active": "56f33a09be3a9f19",
   "lastOpenFiles": [
-    "Fanfics/422. Bluebird DNA - Jason's Teen Wing Form from Tokyo Mew Mew.md",
-    "Fanfics/420. Truth Wings - Emotional Mask Reveals Batfamily's Wings.md",
-    "Fanfics/414. Gate of Truth - Red Hood's Alchemical Circle Encounter.md",
-    "Fanfics/415. Ghost Zone - Tim and Crew Trapped in Phantom Zone.md",
-    "Fanfics/408. Half-Phoenix World - Eternity Rebirth and Fear Lore Synopsis.md",
-    "Fanfics/407. Hidden Halfa - Jason's Cute Ghost Form and Family Reveal.md",
-    "Fanfics/405. Tokyo Mew Mew - Jason's Kitten DNA and Cat Embarrassment.md",
-    "Fanfics/399. Ghost Fledgling - Spoiler Finds Jason's Ghost Form in Gotham.md",
-    "Fanfics/398. Magic Book - Red Hood Becomes Child Mage at Warehouse.md",
-    "Fanfics/387. Code Signal - Jason's Accidental Distress Call and Rescue.md",
-    "Fanfics/371. Veil-Kara Eye - Dual Perception Artifact and Jason's Wings.md",
-    "Fanfics/359. Sacred Bond - Temple's Dark Secret Revealed.md",
-    "Fanfics/345.1. Spark Secret Story.md",
-    "Fanfics/327. Starborn Secret - Aster and the Red Hood.md",
-    "Fanfics/319. Batfamily Reborn - Shuffled Ages in Gotham.md",
-    "Fanfics/312. Selkie Waynes - Family Pod and Jason’s Seal Secret.md",
-    "Fanfics/306. Sweet Fuel, Кошмары и Бэтсемья — обобщение.md",
-    "Fanfics/300. Unchangeable Past, Legacy, and Owls.md",
-    "Fanfics/278. One Child, Eight Faces — Gotham’s Magical Rumors.md",
-    "Fanfics/271.1.Family Accepts Shadows - Halfa Reveal in Batcave.md",
-    "Fanfics/231. Reincarnation Memories and Quirk Awakening.md",
-    "Fanfics/209. Star Child - Winged Amnesia and Homecoming.md",
-    "Fanfics/196. Jason's Magical Cat Transformation and Family Discovery.md",
-    "Fanfics/188. Order of Shadows - Infiltration, Ritual, and Rescue Reveal.md",
-    "Fanfics/172. Magical Avenger - Viral Fame and Family Exposure.md",
-    "Fanfics/169.1. Isekai Bastard Prince - Jason in Weak Body vs Tyrant King.md",
+    "Beta/979..md",
+    "Beta/980.md",
+    "Beta/981..md",
+    "Beta/949..md",
+    "Beta/950..md",
+    "Beta/951..md",
+    "Beta/952..md",
+    "Beta/953..md",
+    "Beta/954..md",
+    "Beta/955..md",
+    "Beta/956..md",
+    "Beta/957..md",
+    "Beta/958..md",
+    "Beta/959..md",
+    "Beta/960..md",
+    "Beta/961..md",
+    "Beta/962..md",
+    "Beta/963..md",
+    "Beta/964..md",
+    "Beta/965..md",
+    "Beta/966..md",
+    "Beta/967..md",
+    "Beta/968..md",
+    "Beta/969..md",
+    "Beta/970..md",
+    "Beta/971..md",
     "Beta/_fix_tags.py",
     "Scripts/fanfics/__pycache__/rename_beta_to_english.cpython-314.pyc",
     "Scripts/fanfics/__pycache__/beta_english_titles.cpython-314.pyc",
