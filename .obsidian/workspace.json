@@ -8,18 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "56f33a09be3a9f19",
+            "id": "77855fc12fe88220",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beta/980.md",
+                "file": "Beta/1006..md",
                 "mode": "source",
-                "source": false,
-                "backlinks": false
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "980"
+              "title": "1006."
             }
           }
         ]
@@ -54,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"С семьёй, которая уже составила негласный график дежурств, меню, список запретов, список",
+                "query": "Гендзи",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -79,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 359.5
   },
   "right": {
     "id": "8e78bd20bd9bca62",
@@ -182,34 +181,35 @@
       "daily-notes:Сегодняшняя заметка": false
     }
   },
-  "active": "56f33a09be3a9f19",
+  "active": "77855fc12fe88220",
   "lastOpenFiles": [
-    "Beta/979..md",
-    "Beta/980.md",
-    "Beta/981..md",
-    "Beta/949..md",
-    "Beta/950..md",
-    "Beta/951..md",
-    "Beta/952..md",
-    "Beta/953..md",
-    "Beta/954..md",
-    "Beta/955..md",
-    "Beta/956..md",
-    "Beta/957..md",
-    "Beta/958..md",
-    "Beta/959..md",
-    "Beta/960..md",
-    "Beta/961..md",
-    "Beta/962..md",
-    "Beta/963..md",
-    "Beta/964..md",
-    "Beta/965..md",
-    "Beta/966..md",
-    "Beta/967..md",
-    "Beta/968..md",
-    "Beta/969..md",
-    "Beta/970..md",
-    "Beta/971..md",
+    "Beta/1005..md",
+    "Beta/1006..md",
+    "Beta/1004..md",
+    "Beta/1002..md",
+    "Beta/1003..md",
+    "Beta/1001..md",
+    "Beta/997..md",
+    "Beta/998..md",
+    "Beta/788. Overwatch Fandom Alt World - Setting ideas.md",
+    "Beta/782. Dragon Heart - Overwatch guilt duty magic.md",
+    "Beta/781. Golden Dragon Overwatch AU - Clan backstory.md",
+    "Beta/780. Dragon Under Skin - Overwatch pre-Dragons short.md",
+    "Beta/779. Two Dragons One Egg - Overwatch child bodies AU.md",
+    "Beta/1000..md",
+    "Beta/778. Dragon Shard - Overwatch Shimada artifact.md",
+    "Beta/777. Overwatch Mission Roster Scenes - Team slice scenes.md",
+    "Beta/776. Genji Hatred After Forgiveness - Overwatch brotherhood.md",
+    "Beta/775. Under Dragon Temple - Overwatch clan artifact.md",
+    "Beta/774. Overwatch Universe Concept - Team roles setting.md",
+    "Beta/773. Shimada Brothers Lab Escapees - Overwatch AU plan.md",
+    "Beta/772. Heir and Donor - Overwatch clan blood metaphor.md",
+    "Beta/771. Within Reach of Hand - Overwatch brothers distance.md",
+    "Beta/770. Genji After Bridge River - Overwatch survival guilt.md",
+    "Beta/999..md",
+    "Beta/769. Shimada Dragons Not Spirits - Overwatch AU rules.md",
+    "Beta/768. Shimada Brothers After Conflict - Overwatch concept.md",
+    "Scripts/tools/jsonl_to_md.py",
     "Beta/_fix_tags.py",
     "Scripts/fanfics/__pycache__/rename_beta_to_english.cpython-314.pyc",
     "Scripts/fanfics/__pycache__/beta_english_titles.cpython-314.pyc",
@@ -219,7 +219,6 @@
     "_build_todo.py",
     "_gen_beta_todo.py",
     "_beta_clusters.json",
-    "To Join the Whispers.pdf",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",
