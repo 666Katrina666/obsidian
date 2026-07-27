@@ -1,0 +1,10 @@
+# Track only Markdown notes from Fanfics and Beta.
+# Everything else stays local.
+
+*
+!*/
+
+!Fanfics/**/*.md
+!Beta/**/*.md
+
+!.gitignore
