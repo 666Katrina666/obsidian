@@ -1,5 +1,0 @@
-{"location": "find_similar_fanfics.py", "message": "main_start", "timestamp": 1771083217527.7417, "data": {"folder": "Fanfics", "output": "similar_fanfics_report.md"}, "hypothesisId": "A"}
-{"location": "find_similar_fanfics.py", "message": "step1_done", "timestamp": 1771083217626.4385, "data": {"file_count": 725}, "hypothesisId": "B"}
-{"location": "find_similar_fanfics.py", "message": "step2_done", "timestamp": 1771083218072.997, "data": {"pairs_with_shared_tag": 260942}, "hypothesisId": "C"}
-{"location": "find_similar_fanfics.py", "message": "step4_start", "timestamp": 1771083218353.3813, "data": {"files_to_load": 723}, "hypothesisId": "E"}
-{"location": "find_similar_fanfics.py", "message": "step4_done", "timestamp": 1771083637973.5667, "hypothesisId": "F"}
