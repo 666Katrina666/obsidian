@@ -91,6 +91,12 @@ python Scripts/fanfics/renumber_fanfics.py --dry-run
 python Scripts/tools/audit_vault.py
 ```
 
+Сверить проставленные теги с тем, что дают критерии (отчёт в корень, ничего не меняет):
+
+```bash
+python Scripts/tools/tag_diff_report.py --folder Fanfics --out tag_diff_fanfics.md
+```
+
 Корень хранилища скрипты находят сами — по наличию папки `tag_criteria/` (`Scripts/lib/paths.py`). Абсолютные пути в скриптах не прописывать.
 
 ## Общий модуль `Scripts/lib/notes.py`
