@@ -1,10 +1,21 @@
-# Track only Markdown notes from Fanfics and Beta.
-# Everything else stays local.
+# Хранилище Obsidian. Репозиторий нужен только для чтения заметок с телефона,
+# правки идут с ПК. Поэтому в гит уезжают заметки и ничего больше.
 
+# 1) По умолчанию игнорируем всё, но разрешаем заходить в подпапки.
 *
 !*/
 
+# 2) Служебные и генерируемые папки не открываем вовсе.
+.obsidian/
+.trash/
+.cursor/
+__pycache__/
+
+# 3) Что реально нужно на телефоне.
 !Fanfics/**/*.md
 !Beta/**/*.md
 
+!CLAUDE.md
 !.gitignore
+!Иерархия_тегов.md
+!План_Beta_Fanfics.md
