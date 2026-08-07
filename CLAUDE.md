@@ -85,6 +85,12 @@ python Scripts/tags/fanfic_tags.py apply Beta --dry-run
 python Scripts/fanfics/renumber_fanfics.py --dry-run
 ```
 
+Проверить целостность структуры (сироты, битые ссылки, пропуски, шапки) — ничего не меняет:
+
+```bash
+python Scripts/tools/audit_vault.py
+```
+
 Корень хранилища скрипты находят сами — по наличию папки `tag_criteria/` (`Scripts/lib/paths.py`). Абсолютные пути в скриптах не прописывать.
 
 ## Общий модуль `Scripts/lib/notes.py`
