@@ -45,9 +45,9 @@
 
 ## Теги
 
-Список **закрытый**, 18 штук. Новые теги не выдумывать — сверяться с `Иерархия_тегов.md`.
+Список **закрытый**, 20 штук. Новые теги не выдумывать — сверяться с `Иерархия_тегов.md`.
 
-Вселенные: `dc`, `dc/dp`, `dc/bnha`, `dc/marvel`, `dc/concept/talon`, `dc/concept/dark_Bruce`, `dsmp`
+Вселенные: `dc`, `dc/dp`, `dc/bnha`, `dc/marvel`, `dc/ori`, `dc/undertale`, `dc/concept/talon`, `dc/concept/dark_Bruce`, `dsmp`
 Сюжет: `dimentional_travel`, `time_travel`, `time_loop`, `reincarnation`, `reveal`
 Трансформации: `wings`, `de-aging`, `dragon`
 Магия: `MahouShoujo` (+ подтеги `MahouShoujo/*`)
