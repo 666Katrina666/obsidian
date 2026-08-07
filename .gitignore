@@ -17,5 +17,6 @@ __pycache__/
 
 !CLAUDE.md
 !.gitignore
+!.gitattributes
 !Иерархия_тегов.md
 !План_Beta_Fanfics.md
