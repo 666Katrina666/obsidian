@@ -198,7 +198,12 @@ def content_seq(lines: list[str], new_format: bool) -> list[str]:
         if runs_mod.THINKING_MARK_RE.match(s):
             continue
         if new_format:
-            if s.startswith("> [!"):
+            # Снимаются только свои callout — запрос и размышления. Чужой
+            # (`> [!note] Примечания к главе`) — текст ответа: его сверяют
+            # как есть, иначе заметка с ним не сходится по числу строк.
+            m = runs_mod._CALLOUT_RE.match(s)
+            if m and m.group(1).lower() in (runs_mod.PROMPT_CALLOUT,
+                                            runs_mod.THINK_CALLOUT):
                 in_callout = True
                 continue
             if in_callout and s.startswith(">"):
