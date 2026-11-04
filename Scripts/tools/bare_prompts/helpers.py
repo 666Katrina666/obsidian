@@ -159,7 +159,8 @@ def verify(ref: str = "HEAD") -> None:
         except MapError as err:
             print("РАЗРЕЗ НЕ ПРИНЯТ:", name, err); bad += 1; continue
         bo, bn = notes.body_after_separator(old), notes.body_after_separator(new)
-        want = len(e.get("prompts", [])) + len(e.get("lost", []))
+        lost = e.get("lost", [])
+        want = len(e.get("prompts", [])) + (1 if lost is True else len(lost))
         got = len(runs.parse_runs(bn.split("\n")))
         ok = (old[:len(old) - len(bo)] == new[:len(new) - len(bn)]
               and content_seq(bo.split("\n"), False)
