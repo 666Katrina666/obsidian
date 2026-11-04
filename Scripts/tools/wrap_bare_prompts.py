@@ -27,6 +27,21 @@
   (одна заглушка на всю заметку) или поставлены наугад. Скрипт её не
   читает при обёртке, а только собирает список в конец отчёта — по всей
   карте, включая заметки, обёрнутые прошлыми партиями.
+- `reviewed` — что решено при разборе такой заметки. Скрипт её не читает,
+  это пометка для автора.
+- `splits` — `[[строка, позиция], …]`: запрос приклеен к концу строки ответа
+  («…внимания.Напиши главу…»), и строку надо разрезать. В строке с этим
+  номером **исходного** файла (до разреза, с единицы) перед символом с этим
+  индексом (с нуля) вставляется один перевод строки — больше ничего: ни
+  пробелов, ни удалений, две новые строки вместе дают исходную побайтно.
+  Разрезы делаются до разметки. **Все остальные номера строк карты**
+  (`prompts`, `lost`, `think`) считаются по файлу уже с разрезами: каждый
+  разрез выше строки сдвигает её на единицу вниз.
+- `think` — `[[начало, конец], …]`: явные размышления модели внутри ответа
+  (строки файла с разрезами, включительно). Диапазон должен идти сразу после
+  запроса или заглушки — между ними только пустые строки; он оформляется
+  callout `> [!abstract]- Размышления` прямо под callout запроса, как ждёт
+  `parse_runs`.
 
 Каждый собранный файл проверяется той же сверкой, что у
 `convert_prompt_markup.py`: весь значимый текст обязан совпасть по порядку,
@@ -67,6 +82,40 @@ class MapError(Exception):
     pass
 
 
+def apply_splits(text: str, splits: list) -> str:
+    """Разрезать склеенные строки: по одному `\n` в каждой точке склейки.
+
+    `splits` — `[[строка, позиция], …]` в номерах исходного файла (с единицы),
+    позиция — индекс символа (с нуля), перед которым встаёт перевод строки.
+    Ничего, кроме перевода строки, не вставляется и не удаляется; результат
+    проверяется: склеенные обратно куски обязаны дать исходный текст.
+    """
+    if not splits:
+        return text
+    lines = text.split("\n")
+    cuts: dict[int, list[int]] = {}
+    for item in splits:
+        if len(item) != 2:
+            raise MapError(f"разрез {item}: нужно [строка, позиция]")
+        line, pos = item
+        if not (1 <= line <= len(lines)):
+            raise MapError(f"разрез: строка {line} вне файла")
+        if not (0 < pos < len(lines[line - 1])):
+            raise MapError(f"разрез: позиция {pos} вне строки {line}")
+        cuts.setdefault(line, []).append(pos)
+    out: list[str] = []
+    for n, l in enumerate(lines, start=1):
+        prev = 0
+        for pos in sorted(set(cuts.get(n, []))):
+            out.append(l[prev:pos])
+            prev = pos
+        out.append(l[prev:])
+    result = "\n".join(out)
+    if result.replace("\n", "") != text.replace("\n", ""):
+        raise MapError("разрез изменил текст")
+    return result
+
+
 def body_offset(text: str) -> tuple[int, list[str]]:
     """Номер строки файла (с нуля), с которой начинается тело, и само тело."""
     body_text = notes.body_after_separator(text)
@@ -83,12 +132,15 @@ def trim(lines: list[str]) -> list[str]:
     return out
 
 
-def wrap(body: list[str], spans: list[tuple[int, int]]) -> list[str]:
+def wrap(body: list[str], spans: list[tuple[int, int]],
+         thinks: dict[int, tuple[int, int]] | None = None) -> list[str]:
     """Новое тело. `spans` — индексы строк тела, конец не включён.
 
     Пустой отрезок (`start == end`) — место, где ответ идёт без запроса:
     туда встаёт заглушка, а сам текст не трогается.
+    `thinks` — номер отрезка в `spans` → отрезок размышлений сразу под ним.
     """
+    thinks = thinks or {}
     out: list[str] = []
     cursor = 0
     for n, (start, end) in enumerate(spans, start=1):
@@ -102,6 +154,12 @@ def wrap(body: list[str], spans: list[tuple[int, int]]) -> list[str]:
                                            f"{runs_mod.PROMPT_LABEL} {n}", prompt))
         out.append("")
         cursor = end
+        if n - 1 in thinks:
+            t0, t1 = thinks[n - 1]
+            out.extend(runs_mod.render_callout(runs_mod.THINK_CALLOUT,
+                                               runs_mod.THINK_LABEL, body[t0:t1]))
+            out.append("")
+            cursor = t1
     out.extend(trim(body[cursor:]))
     return out
 
@@ -112,7 +170,8 @@ def prompt_text(body: list[str], start: int, end: int) -> str:
     return " ".join(l.strip() for l in body[start:end] if l.strip())
 
 
-def check(body: list[str], new_body: list[str], spans: list[tuple[int, int]]) -> str:
+def check(body: list[str], new_body: list[str], spans: list[tuple[int, int]],
+          thinks: dict[int, tuple[int, int]] | None = None) -> str:
     """Пустая строка — всё сошлось, иначе причина отказа."""
     old = content_seq(body, new_format=False)
     new = [s for s in content_seq(new_body, new_format=True) if s != LOST_PROMPT]
@@ -133,6 +192,14 @@ def check(body: list[str], new_body: list[str], spans: list[tuple[int, int]]) ->
         # parse_runs снимает только один уровень цитаты, как и сверка выше.
         if a.replace("> ", "").replace(">", "") != b.replace("> ", "").replace(">", ""):
             return f"запрос {k} прочитан иначе: {b[:50]!r}"
+    for k, (t0, t1) in (thinks or {}).items():
+        want = " ".join(l.strip() for l in body[t0:t1] if l.strip())
+        if want.replace("> ", "").replace(">", "") != \
+                parsed[k].think.replace("> ", "").replace(">", ""):
+            return f"размышления в прогоне {k + 1} прочитаны иначе"
+    for k, r in enumerate(parsed):
+        if k not in (thinks or {}) and r.think:
+            return f"в прогоне {k + 1} размышления, которых нет в карте"
     return ""
 
 
@@ -153,6 +220,7 @@ def resolve(entry: dict, text: str) -> list[tuple[int, int]]:
 
     `lost: true` — заглушка в начале тела; `lost: [[строка, якорь], …]` —
     заглушки перед ответами, у которых запрос пропал посреди заметки.
+    `text` — файл уже с разрезами (`apply_splits`).
     """
     offset, body = body_offset(text)
     file_lines = text.split("\n")
@@ -184,6 +252,30 @@ def resolve(entry: dict, text: str) -> list[tuple[int, int]]:
         if not trim(body[a[1]:b[0]]):
             raise MapError(f"между запросами у строки {a[1] + offset} нет ответа")
     return spans
+
+
+def resolve_think(entry: dict, text: str,
+                  spans: list[tuple[int, int]]) -> dict[int, tuple[int, int]]:
+    """Отрезки размышлений: номер прогона → индексы тела, конец не включён."""
+    offset, body = body_offset(text)
+    out: dict[int, tuple[int, int]] = {}
+    for item in entry.get("think", []):
+        if len(item) != 2 or item[1] < item[0]:
+            raise MapError(f"размышления {item}: нужно [начало, конец]")
+        t0, t1 = item[0] - 1 - offset, item[1] - offset
+        if t0 < 0 or not body[t0].strip():
+            raise MapError(f"размышления {item}: начало пустое или в шапке")
+        k = max((n for n, (s0, s1) in enumerate(spans) if s1 <= t0), default=None)
+        if k is None or any(l.strip() for l in body[spans[k][1]:t0]):
+            raise MapError(f"размышления {item} не идут сразу после запроса")
+        if k + 1 < len(spans) and spans[k + 1][0] < t1:
+            raise MapError(f"размышления {item} заходят на следующий запрос")
+        if not trim(body[t1:spans[k + 1][0] if k + 1 < len(spans) else len(body)]):
+            raise MapError(f"после размышлений {item} нет ответа")
+        if k in out:
+            raise MapError(f"у прогона {k + 1} два диапазона размышлений")
+        out[k] = (t0, t1)
+    return out
 
 
 def describe(body: list[str], spans: list[tuple[int, int]], offset: int) -> list[str]:
@@ -252,12 +344,15 @@ def main() -> None:
             already += 1
             continue
         try:
+            text = apply_splits(text, mapping[name].get("splits", []))
+            offset, body = body_offset(text)
             spans = resolve(mapping[name], text)
+            thinks = resolve_think(mapping[name], text, spans)
         except MapError as e:
             failures.append((name, str(e)))
             continue
-        new_body = wrap(body, spans)
-        problem = check(body, new_body, spans)
+        new_body = wrap(body, spans, thinks)
+        problem = check(body, new_body, spans, thinks)
         if problem:
             failures.append((name, problem))
             continue

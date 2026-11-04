@@ -133,9 +133,16 @@ def add(batch_file: str) -> None:
 
 
 def verify(ref: str = "HEAD") -> None:
-    """Каждая заметка карты, изменённая относительно REF, сверяется с ним."""
+    """Каждая заметка карты, изменённая относительно REF, сверяется с ним.
+
+    Разрез склейки (`splits` в карте) принимается: прежде чем сравнивать,
+    в старый текст вставляются те же переводы строки, а `apply_splits`
+    сама проверяет, что куски вместе дают исходную строку побайтно. Любая
+    другая разница в тексте — расхождение. Размышления (`think`) сверяются
+    как текст ответа: снимается только кавычка callout.
+    """
     from convert_prompt_markup import content_seq
-    from wrap_bare_prompts import LOST_PROMPT
+    from wrap_bare_prompts import LOST_PROMPT, MapError, apply_splits
     m = json.loads(MAP.read_text(encoding="utf-8"))
     bad = n = tot = 0
     for name, e in m.items():
@@ -147,6 +154,10 @@ def verify(ref: str = "HEAD") -> None:
         new = (ROOT / f).read_text(encoding="utf-8")
         if old == new:
             continue
+        try:
+            old = apply_splits(old, e.get("splits", []))
+        except MapError as err:
+            print("РАЗРЕЗ НЕ ПРИНЯТ:", name, err); bad += 1; continue
         bo, bn = notes.body_after_separator(old), notes.body_after_separator(new)
         want = len(e.get("prompts", [])) + len(e.get("lost", []))
         got = len(runs.parse_runs(bn.split("\n")))
