@@ -1,4 +1,4 @@
-#dc #dimentional_travel #reincarnation #reveal #de-aging #MahouShoujo
+#dc #dimentional_travel #reincarnation #reveal #de-aging #MahouShoujo #humor
 
 Развитие 183 с нуля перед переписью через GPT: Джейсон попадает в мир Sailor Moon как реинкарнация младшего брата Серенити, погибшего ребёнком в первой атаке на Луну. Разбор из 27 пунктов: канон-сплав (характеры 90-х, лор манги), детская форма принца, свет, который лечит Яму, первая арка в Токио и возвращение в Готэм.
 %% tag-lock: -time_travel %%
