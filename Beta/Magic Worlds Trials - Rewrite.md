@@ -347,7 +347,7 @@
 ### Отброшено
 
 - По ходу разбора: Cardcaptor, Mew Mew Olé, Kiruminzoo, Sweet Valerian, Digimon Frontier, American Dragon, Machikado Mazoku, Mermaid Melody (был запасным к Princession Orchestra), Twin Angel, Pretear, Mewkledreamy, Go! Princess, Hirogaru Sky, Kimi to Idol, Otona '23, Madoka, Fancy Lala, Pretty Sammy, Vividred, Utena, Winx, W.I.T.C.H., Doremi, Sugar Sugar Rune, Nurse Angel Ririka, Nurse Witch Komugi R, Binan Koukou, Bokura wa Mahou Shounen, Zodiac P.I., Bee and PuppyCat, Nanatsuiro Drops, вся группа «во взрослого».
-- Shugo Chara ушёл в отдельную идею: [[Jason Shugo Chara - Idea]].
+- Shugo Chara ушёл в отдельную идею: [[Jason Shugo Chara - Idea]]%%→26380576%%.
 - Ещё при сборе пула: Miraculous, Miraculous Shanghai, Hime-chan no Ribbon, Mahou Shoujo Nante Mou Ii, Corrector Yui, PriPara, Tonde Buurin, Magilumiere, Acro Trip, Ben 10, Marvelous Melmo, Power Stone, Dragon Booster, Saint Tail. А также все «слишком детские», миры со сменой пола, с романтикой, без формы, с множеством форм на мир, сценические системы, Rayearth.
 - В запасе, если где-то ляжет само: лечебная магия для Джейсона (от Nurse Angel Ririka) и механика «самообман ослабляет форму» (от Bokura wa Mahou Shounen).
 
